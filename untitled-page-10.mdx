@@ -1,0 +1,11 @@
+---
+title: "How Often Should A Minecraft Server Restart?"
+---
+
+A daily restart is a good habit for any Minecraft server.
+
+Over time, a running server builds up leftover data in memory: sessions from players who disconnected, chunks that never fully unloaded, stray entities, and similar buildup. Restarting clears all of that out, and doing it roughly every 24 hours produces a real, noticeable improvement in performance.
+
+## Automate restarts with Schedules
+
+Manual restarts are easy to forget, so let the panel handle it instead. From the **Schedules** page, set up a schedule that fires a **restart** power action on a cron timer, ideally during a low traffic window for your player base. You can also chain in a console command action beforehand, like `say Server restarting in 5 minutes`, so players get a heads up before it happens.

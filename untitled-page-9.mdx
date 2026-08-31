@@ -1,0 +1,33 @@
+---
+title: "Common Causes Of Lag On A Minecraft Server"
+---
+
+Lag on a Minecraft server usually traces back to a handful of repeat offenders: hoppers, entity counts, world generation, and spawn chunk activity. This guide walks through each one and how to address it.
+
+## Number of Entities
+
+Entities cover both mobs and dropped items. When too many stack up in one spot, the server has to tick all of them, and performance drops.
+
+### Fixes for entity lag
+
+Space farms out instead of clustering them together, keep mob grinders killing efficiently so mobs don't linger, and prevent item piles from forming (lava or a cactus can clear overflow, or a hopper minecart can collect it before it builds up). Cleanup plugins like ClearLag are largely unnecessary on modern versions and can sometimes add more overhead than they remove.
+
+## World Generation
+
+The first time a chunk loads, the server has to generate it from scratch, which is a heavy operation. Players exploring fresh terrain will feel this as lag.
+
+### Fixes for world generation lag
+
+Pre generating the map ahead of time solves this. [Chunky](https://modrinth.com/plugin/chunky) can walk through and generate the whole world before anyone sets foot in it, moving that cost out of live gameplay.
+
+## Building At Spawn
+
+Spawn chunks stay loaded permanently, which is what makes them useful, but also what makes them risky. A farm or redstone build placed there runs nonstop and taxes the server continuously.
+
+### Fixes for spawn chunk lag
+
+Avoid putting large farms or redstone contraptions in the spawn chunks. If you do, add a way to shut them off when they're not needed. That always loaded behavior can actually be useful when it's intentional, so this comes down to using it deliberately rather than avoiding it entirely.
+
+## Running Mods or Plugins?
+
+If your server runs mods or plugins, chances are one of them is the source of the lag. Installing [spark](how-to-install-spark.md) and reading through the profile it generates is the fastest way to pin down exactly which one.

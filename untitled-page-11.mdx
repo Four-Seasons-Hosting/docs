@@ -1,0 +1,36 @@
+---
+title: "How To Add A Minecraft Server Resource Pack"
+---
+
+A server side resource pack gets pushed to players automatically when they connect, so you can roll out custom textures, sounds, and more without anyone installing anything manually.
+
+## Getting a Resource Pack Ready
+
+Start by creating or downloading the resource pack you want players to use.
+
+### Hosting the Pack
+
+Your game server can't serve the file itself, so it needs to live somewhere with a direct download link. [mc-packs.net](http://mc-packs.net) is a common choice for this.
+
+1. Go to [mc-packs.net](http://mc-packs.net).
+2. Upload the pack as a zip file. Larger packs take longer depending on your upload speed.
+3. Once it finishes, the site returns a **download URL** and a **SHA-1 hash**. Hold onto both, you'll need them shortly.
+
+## Configuring the Server
+
+1. Log into the panel at `gamepanel.fourseasonshosting.com` and select your server.
+2. Stop the server from the **Console** tab.
+3. Go to the **Files** tab and open `server.properties`.
+4. On the `resource-pack=` line, paste in the download URL.
+5. On the `resource-pack-sha1=` line, paste in the SHA-1 hash.
+6. Save your changes and restart the server.
+
+Once it's back online, players will get a prompt to download the pack the moment they join. The `require-resource-pack=` setting in the same file controls whether accepting the pack is mandatory or optional.
+
+### Troubleshooting
+
+If players aren't getting the pack correctly, run through these checks:
+
+- Confirm the pack was built for the same Minecraft version the server is running, mismatched versions often show up as broken or missing textures.
+- Double check the SHA-1 hash matches the uploaded file exactly.
+- Make sure `resource-pack` points straight to a `.zip` file and isn't a page link or redirect.

@@ -1,0 +1,13 @@
+---
+title: "Can't Build On A Minecraft Server"
+---
+
+If players can't build at a specific location, it's usually spawn protection. Minecraft enables a 33x33 block spawn protection area by default, and only server operators (opped players) can build inside it. You can fix this by disabling spawn protection:
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com` and stop your server from the **Console** page.
+2. Open the **Files** page and open the `server.properties` file in the root folder.
+3. Find the `spawn-protection` line and change the value from `16` to `0`.
+4. Click **Save**.
+5. Start your server. Spawn protection is now disabled and everyone can build anywhere.
+
+If you'd rather keep some protection, set a smaller radius instead of 0 or op the players who need to build at spawn, since ops bypass spawn protection.

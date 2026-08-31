@@ -1,0 +1,17 @@
+---
+title: "How To Change A Minecraft Server's Simulation Distance"
+---
+
+## What Simulation Distance Does
+
+Introduced in Minecraft 1.18, simulation distance sets how far from a player the world keeps actively simulating. Set it to 5, for instance, and a creeper you spawn will freeze in place the moment you're more than 5 chunks away from it.
+
+The default value on your server is 10. Dropping it lower means fewer chunks get ticked every second, which is one of the simpler, more effective ways to cut down on lag.
+
+## Changing the Value
+
+1. Log into the panel at `gamepanel.fourseasonshosting.com` and stop the server from the **Console** tab.
+2. Open the **Files** tab and locate `server.properties` in the root directory.
+3. Edit the `simulation-distance` line, setting it to however many chunks you want.
+4. Save the file.
+5. Start the server back up, the new setting takes effect immediately.
