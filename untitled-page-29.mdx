@@ -1,0 +1,40 @@
+---
+title: "How to Install spark"
+---
+
+spark is a performance monitoring and profiling tool for Minecraft servers. It can help identify what is consuming server resources when you are experiencing lag, slow ticks, or other performance-related problems.
+
+spark is available for multiple Minecraft server platforms and mod loaders.
+
+Download the version that matches your server from the [spark downloads page](https://spark.lucko.me/download). For older releases, you can also check the [CurseForge files page](https://www.curseforge.com/minecraft/mc-mods/spark/files/all?page=1&pageSize=20).
+
+## Install spark
+
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Stop the server.
+3. Open **Files**.
+4. Upload the spark JAR to the appropriate directory:
+   - **Paper/Spigot:** `plugins`
+   - **Forge/Fabric:** `mods`
+5. Start the server.
+
+spark will load automatically during startup.
+
+## Run a Performance Profile
+
+For the most useful results, start a profile while the server is actively experiencing the performance problem you are trying to investigate. Running a profile when everything is operating normally may not capture the source of the issue.
+
+1. Run the following command either in-game or from the server **Console**:
+   ```text
+   spark profiler start
+   ```
+   When using the panel console, do not include the `/` at the beginning of the command.
+2. Allow the profiler to collect enough information while the lag or high resource usage is occurring.
+3. Once you have collected sufficient data, run:
+   ```text
+   spark profiler open
+   ```
+4. spark will generate a report and provide a URL in the console.
+5. Open the provided URL in your browser to review the profile.
+
+The report breaks down server activity and can help identify which tasks, plugins, mods, or other operations are consuming the most tick time.

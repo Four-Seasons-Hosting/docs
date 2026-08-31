@@ -1,0 +1,59 @@
+---
+title: "How to Set Up Simple Voice Chat"
+---
+
+Simple Voice Chat adds proximity-based voice communication to Minecraft, allowing players to talk to others nearby without relying on an external voice service.
+
+Simple Voice Chat is available as both a mod and a plugin. Download the appropriate version from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) or [Modrinth](https://modrinth.com/plugin/simple-voice-chat/versions).
+
+> **Important:** Players must also install the Simple Voice Chat mod on their Minecraft client to use voice communication.
+
+## Forge or Fabric Installation
+
+Use these instructions if your server is running Forge or Fabric.
+
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open **Files**.
+3. Enter the `mods` directory.
+4. Upload the Simple Voice Chat JAR.
+5. Start the server once to allow the mod to create its configuration files.
+6. Stop the server after it has finished starting.
+7. Open the **Network** section.
+8. Create an additional **allocation** and copy the port assigned to it. Adding a note can make it easier to identify later.
+9. Return to **Files** and locate the voice chat configuration:
+   - **Fabric:** `config/voicechat`
+   - **Forge:** The server configuration may instead be located at `<your world folder>/serverconfig/voicechat-server.toml`
+10. Open `voicechat-server.properties` when using the configuration file in the `config/voicechat` directory.
+11. Find the `port=` setting and replace its value with the port from your additional allocation.
+12. Save the configuration.
+13. Start the server.
+
+Simple Voice Chat should now use the assigned network port.
+
+## Paper or Spigot Installation
+
+If your server uses Paper or Spigot, install Simple Voice Chat as a plugin instead.
+
+1. Open **Files** in the game panel.
+2. Navigate to the `plugins` directory.
+3. Upload the Simple Voice Chat plugin JAR.
+4. Start the server so the plugin can create its configuration files.
+5. Stop the server once startup has completed.
+6. Open **Network**.
+7. Create an additional **allocation** and copy the assigned port.
+8. Return to **Files**.
+9. Open `plugins/voicechat`.
+10. Open `voicechat-server.properties`.
+11. Change the `port=` value to the port assigned to the voice chat service.
+12. Save the file.
+13. Start the server again.
+
+Voice chat should be available once the server has finished starting.
+
+## Using Simple Voice Chat With a Proxy Network
+
+If your Minecraft network uses a proxy with multiple backend servers, each backend server needs its own Simple Voice Chat installation.
+
+Every backend should also have a separate network allocation. Configure the voice chat port in each server's configuration to match its assigned allocation.
+
+Make sure the required network ports are accessible and that your proxy setup does not prevent voice chat traffic from reaching the individual backend servers.

@@ -1,0 +1,69 @@
+---
+title: "How to Run Minecraft Mods and Plugins Together"
+---
+
+Normally, Minecraft mods and Bukkit-based plugins are designed for different server platforms. Hybrid server software bridges that gap by allowing certain servers to load both mods and plugins.
+
+The best option depends on your Minecraft version and the mod loader you are using.
+
+Minecraft Version	Mod Loader	Hybrid Software 1.7.10	Forge	Thermos 1.12.2	Forge	Magma or Mohist 1.14\+	Forge, NeoForge, or Fabric	Arclight Supported versions	Forge	SpongeForge
+
+Note: Magma and Mohist have versions newer than 1.12.2. However, based on our experience, Arclight tends to provide a smoother experience on newer Minecraft versions.
+
+Install Hybrid Server Software
+
+The general installation process is similar across the available hybrid platforms.
+
+1. Prepare Your Server Open your server in the game panel at gamepanel.fourseasonshosting.com. Stop the server from the Console page. Create a backup from the Backups page before replacing or modifying your server software.
+2. Download the Appropriate Software
+
+Download the release that matches your Minecraft version from the project's official repository or download page.
+
+Arclight - Use the appropriate release for your Minecraft version. Magma - Use the Releases section. Mohist - Select the Minecraft version you need. Thermos - Download the server JAR and the libraries.zip included with the release.
+
+If you are installing Thermos, upload libraries.zip alongside the server JAR and extract it before starting the server.
+
+3. Upload the Server JAR Open the Files section of the game panel. Upload the hybrid server JAR to the main server directory. Open Startup. Locate Server Jar File (SERVER\_JARFILE). Enter the exact filename of the JAR you uploaded. Save the startup configuration.
+4. Start the Server
+
+Start the server and allow the hybrid software to complete its initial setup.
+
+After the first successful startup, the server should create the directories required for both mods and plugins.
+
+Place:
+
+Bukkit, Spigot, or compatible plugins in the plugins directory. Minecraft mods in the mods directory.
+
+Restart the server after adding new content.
+
+Using SpongeForge
+
+SpongeForge works differently from the other hybrid options listed above.
+
+SpongeForge is installed as a Forge mod rather than being used as a standalone server JAR.
+
+Download the appropriate SpongeForge release from Sponge. Stop your server. Open Files. Upload the SpongeForge JAR into the mods directory. Start the server.
+
+SpongeForge will create a plugins directory for Sponge plugins.
+
+Sponge plugins are available through the Sponge Ore repository.
+
+Important: Sponge plugins are different from Bukkit, Spigot, and Paper plugins. Bukkit-based plugins cannot be installed into a SpongeForge server simply by placing them in its plugins folder.
+
+Things to Consider World and Save Compatibility
+
+Running mods and plugins together introduces additional compatibility concerns. Certain plugins or mods can modify world data, entities, inventories, or other persistent information.
+
+Always create a backup before installing new software or making significant changes to a hybrid server.
+
+Switching Server Software
+
+Moving an existing server from one platform to another is not always straightforward. Some plugins and mods store data in platform-specific locations or modify your world in ways that may not transfer cleanly.
+
+Check the documentation for any major plugin or mod before switching server software.
+
+Stability and Compatibility
+
+Hybrid servers have more components working together than a standard modded or plugin-based server. Certain combinations of mods and plugins can cause unexpected behavior, crashes, or repeated startup failures.
+
+If your server enters a crash loop after installing new content, remove the recently added mods or plugins and test the server again. Add components back individually to identify the source of the conflict.

@@ -1,0 +1,77 @@
+---
+title: "How to Set Up and Manage a Minecraft Server Whitelist"
+---
+
+A Minecraft whitelist restricts server access to approved players. When the whitelist is active, players must be added to the whitelist before they can connect.
+
+> **Console commands:** When entering commands through the game panel's **Console**, leave out the `/` at the beginning.
+
+## Enable or Disable the Whitelist
+
+You can control the whitelist using Minecraft commands.
+
+To enable it:
+
+```text
+/whitelist on
+```
+
+To turn it off:
+
+```text
+/whitelist off
+```
+
+When entering these commands through the panel console, use `whitelist on` or `whitelist off` without the `/`.
+
+## Add or Remove Players
+
+Once the whitelist is enabled, you can control which players are allowed to connect.
+
+Add a player:
+
+```text
+/whitelist add <username>
+```
+
+Remove a player:
+
+```text
+/whitelist remove <username>
+```
+
+For example:
+
+```text
+/whitelist add Steve
+```
+
+Only players with operator permissions can run whitelist commands in-game. Commands entered through the game panel's **Console** do not require the player entering them to have OP.
+
+## Enable the Whitelist Through server.properties
+
+You can also configure the whitelist directly through your server's `server.properties` file.
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open your Minecraft server.
+3. Stop the server from the **Console** page.
+4. Navigate to **Files**.
+5. Open `server.properties`.
+6. Locate:
+   ```text
+   white-list=false
+   ```
+7. Change it to:
+   ```text
+   white-list=true
+   ```
+8. Save the file.
+9. Optionally, locate `enforce-whitelist` and set it to:
+   ```text
+   enforce-whitelist=true
+   ```
+10. Start the server.
+
+With `enforce-whitelist` enabled, players who are removed from the whitelist while connected will be disconnected from the server.
+
+After enabling the whitelist, use the `whitelist add` and `whitelist remove` commands to control which players are permitted to join.

@@ -1,0 +1,63 @@
+---
+title: "How to Pre-Generate Chunks on a Minecraft Server"
+---
+
+Minecraft normally generates terrain as players explore new areas. On larger servers, this can create significant CPU usage and temporary lag when players travel into unexplored regions.
+
+Using Chunky, you can generate a selected area ahead of time so the server does not need to generate those chunks while players are exploring.
+
+Download the Chunky release that matches your Minecraft version from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator-forge).
+
+## Install Chunky
+
+Chunky can be installed as either a mod or a plugin depending on your server software.
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Stop your server from the **Console** page.
+3. Open **Files**.
+4. Upload the Chunky JAR to the appropriate directory:
+   - **Forge/Fabric:** `mods`
+   - **Paper/Spigot:** `plugins`
+5. Start the server.
+
+Once the server finishes starting, Chunky will be available for use.
+
+## Pre-Generate an Area
+
+Chunky commands can be executed in-game by an operator or directly from the server **Console**.
+
+When entering commands through the console, do not include the `/` at the beginning.
+
+For additional commands and configuration options, see the [Chunky documentation](https://github.com/pop4959/Chunky/wiki).
+
+### Generate a Square Around 0,0
+
+The following commands select a **1,000-block radius** around the coordinates `0,0` in the Overworld and begin generation:
+
+```text
+/chunky radius 1000
+/chunky start
+```
+
+This will generate the area within the configured radius.
+
+### Generate a Circle Around Spawn in the Nether
+
+To generate a circular area around the Nether spawn location, use:
+
+```text
+/chunky world the_nether
+/chunky shape circle
+/chunky radius 1000
+/chunky start
+```
+
+Chunky will switch the target dimension to the Nether, select a circular shape, configure the radius, and begin generating the chunks.
+
+## Performance Considerations
+
+Chunk pre-generation can place a heavy load on your server's CPU and storage. Larger generation areas can take a considerable amount of time to complete.
+
+For the best results, run pre-generation when the server is not being actively used, such as during scheduled maintenance or before launching the server to players.
+
+Avoid starting very large generation jobs during peak hours, as they can temporarily increase resource usage and affect players who are online.

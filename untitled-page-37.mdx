@@ -1,0 +1,87 @@
+---
+title: "How to Configure Voting for a Minecraft Server"
+---
+
+Minecraft server voting allows players to support your server on public server-list websites while receiving rewards in-game.
+
+This setup uses two plugins:
+
+- **NuVotifier** receives and verifies votes sent by voting websites.
+- **VotingPlugin** processes those votes and handles player rewards.
+
+If your network uses a proxy, NuVotifier should generally be installed on the proxy rather than directly on the backend server. Refer to the [NuVotifier setup documentation](https://github.com/NuVotifier/NuVotifier/wiki/Setup-Guide) for proxy configurations.
+
+## Install NuVotifier
+
+Without a proxy, NuVotifier can be installed directly on your Minecraft server.
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open your server and stop it from the **Console** page.
+3. Navigate to **Files** and open the `plugins` directory.
+4. Upload the NuVotifier JAR.
+5. Start the server and wait for it to finish loading.
+6. Stop the server again so you can configure the plugin.
+7. Open **Network** and create an additional **allocation**.
+8. Copy the port assigned to the new allocation.
+9. Return to **Files** and open `plugins/Votifier`.
+10. Open `config.yml`.
+11. Locate the `port` setting and replace its value with the port from your new allocation.
+12. Save the configuration.
+13. Start the server.
+
+NuVotifier is now ready to receive connections from voting websites.
+
+## Install VotingPlugin
+
+VotingPlugin manages the voting system on your server, including vote tracking and player rewards.
+
+Download the plugin from its [Spigot page](https://www.spigotmc.org/resources/votingplugin.15358/).
+
+1. Stop your Minecraft server.
+2. Open **Files** and enter the `plugins` directory.
+3. Upload the VotingPlugin JAR.
+4. Start the server and allow the plugin to generate its configuration files.
+5. Stop the server again.
+6. Open **Files** and navigate to `plugins/VotingPlugin`.
+7. Open the generated configuration file.
+8. Configure the plugin according to your voting setup.
+9. Save your changes.
+10. Start the server.
+
+> **Note:** VotingPlugin does not require a separate network allocation just to process votes. NuVotifier is the component that needs to receive connections from external voting sites.
+
+## Configure Vote Sites and Rewards
+
+After both plugins are installed, add the voting websites you want players to use.
+
+The [VotingPlugin VoteSites guide](https://github.com/BenCodez/VotingPlugin/wiki/Adding-VoteSites) explains how to add voting sites to the plugin.
+
+You can then configure the items, commands, currency, or other rewards players receive when they vote. The [VotingPlugin rewards documentation](https://github.com/BenCodez/AdvancedCore/wiki/Rewards) covers the available reward configuration.
+
+## Add Your Server to Voting Websites
+
+The final step is registering your server with the voting sites you want to use.
+
+Each website has its own registration process, but you will generally need to provide information such as:
+
+- **Server Address:** The address players use to connect to your server.
+- **Voting Port:** The port assigned to NuVotifier.
+- **Public Key:** The NuVotifier key used to verify incoming votes.
+
+The exact location and name of these settings can vary depending on the NuVotifier version you are running.
+
+> **Security:** Never share your NuVotifier private key or other server secrets publicly. Only provide the information specifically requested by the voting website.
+
+## Test Voting
+
+Once your server has been added to a voting website, submit a test vote.
+
+Check the server console and VotingPlugin's data to confirm that the vote was received and the configured reward was delivered.
+
+If the reward does not arrive, check the following:
+
+1. The voting website is using the correct server address.
+2. The NuVotifier port matches your additional network allocation.
+3. The voting website has the correct NuVotifier public key.
+4. The vote site is configured correctly in VotingPlugin.
+5. NuVotifier and VotingPlugin are both enabled without errors in the server console.

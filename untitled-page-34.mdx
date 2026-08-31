@@ -1,0 +1,61 @@
+---
+title: "How to Change the Seed on a Minecraft Server"
+---
+
+A Minecraft **seed** determines how the terrain, biomes, structures, and other world features are generated.
+
+Changing the seed does not modify a world that already exists. The new value is only used when Minecraft creates a new world.
+
+## Configure the World Seed
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open your server and stop it from the **Console** page.
+3. Go to **Files** and open `server.properties`.
+4. Locate the following setting:
+   ```text
+   level-seed=
+   ```
+5. Enter the seed you want after the `=` sign. To have Minecraft generate a random seed, leave the value blank.
+6. Save the file.
+
+If you cannot find `level-seed` in `server.properties`, start the server once and allow it to finish generating its configuration files. Stop the server afterward and edit the file.
+
+## Generate a New World
+
+After setting the seed, you need to make Minecraft create a new world. There are two ways to do this.
+
+### Option 1: Remove the Existing World
+
+If you no longer need the current world:
+
+1. Open **Files**.
+2. Locate the world directory currently being used by the server.
+3. The folder name normally matches the `level-name` value in `server.properties`, which is commonly `world`.
+4. Delete the world folder.
+
+Deleted files are moved to the **Trash**, so you may be able to restore the world if you change your mind.
+
+> **Before deleting the world:** Create a backup if there is anything in the existing world that you may want to recover later.
+
+### Option 2: Keep the Existing World
+
+If you want to keep your current world while generating another one:
+
+1. Open `server.properties`.
+2. Find:
+   ```text
+   level-name=
+   ```
+3. Change the value to a new world name, such as:
+   ```text
+   level-name=newworld
+   ```
+4. Save the file.
+
+Because a world with the new name does not exist, Minecraft will generate one when the server starts.
+
+## Start the Server
+
+Start the server from the **Console** page.
+
+Minecraft will generate the new world using the seed configured in `level-seed`. Your previous world remains available if you used the second method.
