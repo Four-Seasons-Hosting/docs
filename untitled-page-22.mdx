@@ -1,0 +1,35 @@
+---
+title: "How to Add a Datapack to a Minecraft Server"
+---
+
+Datapacks let you customize Minecraft without installing traditional mods. Depending on the datapack, you can add new gameplay mechanics, commands, recipes, world-generation changes, and other features.
+
+Before installing one, verify that the datapack supports the **Minecraft version** running on your server.
+
+## Install the Datapack
+
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open the server you want to modify.
+3. Stop the server from the **Console** page.
+4. Go to **Files** and locate your active world folder. The folder name should match the `level-name` setting in `server.properties`. In most cases, this will be `world`.
+5. Open the `datapacks` folder inside the world directory.
+6. Upload the datapack into this folder. You can drag the file directly into the file browser.
+7. Start the server again.
+
+### ZIP or Extracted Format?
+
+Datapacks are distributed in different formats. Some are designed to remain as a `.zip` file, while others require you to extract the archive before Minecraft can recognize them.
+
+Check the instructions provided by the datapack author before uploading it. Using the wrong format can prevent the datapack from loading correctly.
+
+## Check if the Datapack Loaded
+
+You can confirm that Minecraft detected the datapack from the server console.
+
+Run:
+
+```text
+datapack list
+```
+
+The command will display the datapacks currently recognized by your server.

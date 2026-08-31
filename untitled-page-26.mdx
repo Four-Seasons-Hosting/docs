@@ -1,0 +1,51 @@
+---
+title: "How to Set Up Geyser for Bedrock and Java Cross-Play"
+---
+
+GeyserMC allows Minecraft Bedrock Edition players to connect to a Java Edition server. With Floodgate installed alongside Geyser, Bedrock players can join without needing a Java Edition Minecraft account.
+
+This setup is useful when you want Java and Bedrock players to play together on the same server.
+
+> **Requirements:** Your server must be running **Paper or Spigot**. Download the appropriate versions of [Geyser](https://geysermc.org/download) and [Floodgate](https://geysermc.org/download#floodgate) before starting.
+
+## Install Geyser and Floodgate
+
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open your Minecraft server and stop it from the **Console** page.
+3. Navigate to **Files** and open the `plugins` directory.
+4. Upload both the Geyser and Floodgate JAR files. You can drag the files into the file browser or use the **Upload** button.
+5. Start the server.
+6. Allow the server to finish starting so Geyser and Floodgate can create their configuration files.
+7. Stop the server again after it has fully started.
+8. Open the **Network** section of the panel.
+9. Create an additional **allocation** and note the port assigned to it. Bedrock players will use this port when connecting.
+10. Return to **Files** and open:
+    ```text
+    plugins/Geyser-Spigot
+    ```
+11. Open `config.yml`.
+12. Find the Geyser `port` setting and replace its current value with the port assigned in the **Network** section.
+13. Save the configuration file.
+14. Start the server.
+
+> **Can't find** `Geyser-Spigot`**?** The plugin may not have finished generating its files. Start the server again, allow it to completely finish loading, then stop it and check the `plugins` directory again.
+
+## Connect From Minecraft Bedrock
+
+Once Geyser is configured, Bedrock players can connect using the server address and the additional port assigned through the **Network** page.
+
+Java players can continue connecting through the normal Java server address and port.
+
+## Fix Bedrock Skins Not Appearing
+
+Depending on your server and client setup, Bedrock player skins may not always display correctly for Java players.
+
+If skins are missing, an additional client mod and server plugin can be used to improve compatibility.
+
+The affected Bedrock player's Minecraft client must be using **Fabric** for the client-side mod.
+
+1. Download the [Bedrock Skin Utility Mod](https://modrinth.com/mod/bedrockskinutility) and install it on the player's Fabric client.
+2. Download the [Geyser Skin Manager Plugin](https://www.spigotmc.org/resources/geyserskinmanager.88607/) and place it in the server's `plugins` directory.
+3. Restart the server after installing the plugin.
+
+This can help Bedrock skins display correctly when players connect through Geyser.

@@ -1,0 +1,100 @@
+---
+title: "How to Install and Configure LuckPerms on a Minecraft Server"
+---
+
+LuckPerms is a permissions management system for Minecraft servers. It allows you to organize players into groups and control which commands and features each group can access.
+
+LuckPerms supports multiple Minecraft server platforms and can also be used to manage chat prefixes and other group metadata.
+
+This guide covers the basic setup. For advanced permissions management, refer to the official LuckPerms documentation.
+
+## Install LuckPerms
+
+LuckPerms provides separate downloads depending on the Minecraft platform your server uses.
+
+Download the appropriate version from the [LuckPerms download page](https://luckperms.net/download), then install it using the steps below.
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Stop your server.
+3. Open **Files**.
+4. Select the directory that matches your server platform:
+   - **Paper, Spigot, or Bukkit:** `plugins`
+   - **Forge or Fabric:** `mods`
+5. Upload the LuckPerms JAR file.
+6. Start the server.
+
+LuckPerms will create its required files when the server starts.
+
+## Manage Groups and Permissions
+
+LuckPerms includes a browser-based editor that makes managing permissions much easier than manually editing configuration files.
+
+From the server **Console**, run:
+
+```text
+lp editor
+```
+
+You can also use:
+
+```text
+luckperms editor
+```
+
+LuckPerms will provide a URL. Open that URL in your browser to access the editor.
+
+From the web editor, you can:
+
+- Create and remove groups
+- Add or remove permission nodes
+- Assign players to groups
+- Configure group inheritance
+- Set prefixes and other metadata
+
+Use the **plus** button to create a group, then enter permission nodes using the permission field near the bottom of the editor.
+
+When you are finished making changes, select **Save**. LuckPerms will provide a command that you can run from your server console to apply the configuration.
+
+## Add a Group Prefix
+
+Prefixes allow you to display a label before a player's name, such as a staff rank or role.
+
+To assign a prefix to a group, add a metadata entry using the following format:
+
+```text
+prefix.<weight>.<prefix>
+```
+
+For example:
+
+```text
+prefix.22.&a&l{&6Head Admin&a&l} &r
+```
+
+The number after `prefix` is the **weight**. When a player belongs to multiple groups with prefixes, LuckPerms uses the appropriate weight to determine which prefix takes priority.
+
+For example, if a player belongs to both an `Admin` group and a `Head Admin` group, assigning the Head Admin prefix a higher weight allows it to take precedence.
+
+## Display Prefixes in Chat
+
+Creating a prefix in LuckPerms does not automatically make it appear in Minecraft chat. You also need a chat system that reads LuckPerms metadata and formats player messages.
+
+You can use a compatible chat plugin such as [ChatEx Continued](https://www.spigotmc.org/resources/chatex-continued.71041/) or [EssentialsX](https://essentialsx.net/downloads.html) with the **EssentialsXChat** component.
+
+Once the chat plugin is installed and configured to use LuckPerms prefixes, your group prefixes can appear alongside player names.
+
+## Assign Permissions to Players and Groups
+
+Minecraft plugins generally use permission nodes to determine whether a player can use a particular command or feature.
+
+The exact permission node depends on the plugin providing the command. Check the documentation for the plugin you want to configure to find its available permission nodes.
+
+For example, EssentialsX documents its permissions [here](https://essinfo.xeya.me/permissions.html).
+
+If you wanted to allow a group to use the EssentialsX `/afk` command, you would assign:
+
+```text
+essentials.afk
+```
+
+Once the permission has been added to the appropriate LuckPerms group, members of that group will be able to use the command.

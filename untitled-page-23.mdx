@@ -1,0 +1,56 @@
+---
+title: "How to Install Bluemap on a Minecraft Server"
+---
+
+BlueMap creates an interactive 3D representation of your Minecraft world that can be accessed through a web browser.
+
+BlueMap requires a compatible server platform or mod loader. Depending on your setup, it can run as a plugin on **Paper or Spigot**, or as a mod on **Forge or Fabric**.
+
+## Install BlueMap
+
+Before beginning, make sure your server is using a compatible plugin or mod loader.
+
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Start the server once so the required directories are created.
+3. Stop the server again after it finishes starting.
+4. Download the appropriate BlueMap JAR for your server platform from [Modrinth](https://modrinth.com/plugin/bluemap), CurseForge, or the BlueMap GitHub repository.
+5. Open **Files** in the game panel.
+6. Upload the BlueMap JAR to the appropriate directory:
+   - **Paper/Spigot:** `plugins`
+   - **Forge/Fabric:** `mods`
+7. Start the server and allow BlueMap to generate its configuration files.
+8. Stop the server once the configuration has been created.
+9. Open the **Network** section of the panel.
+10. Create an additional **allocation** for the BlueMap web server.
+11. Copy the port assigned to the new allocation.
+12. Return to **Files** and open the BlueMap web server configuration:
+
+- **Paper/Spigot:** `plugins/bluemap/webserver.conf`
+- **Forge/Fabric:** `config/bluemap/webserver.conf`
+
+13. Find the `port:` setting and replace its value with the port from your new allocation.
+14. Save the configuration.
+15. Start the Minecraft server.
+
+## Access the BlueMap Website
+
+Once BlueMap is running, you can access the generated map using the allocation assigned to its web server.
+
+1. Open the **Network** page in the game panel.
+2. Locate the allocation you created for BlueMap.
+3. Copy the complete address and port shown for that allocation.
+4. Enter the address into your web browser using the `http://` prefix.
+
+For example:
+
+```text
+http://address:port
+```
+
+BlueMap should load and display your server's world.
+
+You can also setup custom Domains or Sub-domains within the panel leading to your BlueMap site
+
+### Initial Map Rendering
+
+The first map generation can take some time, especially for large or heavily explored worlds. BlueMap will process the world in the background, so the map may initially appear incomplete and gradually fill in as rendering progresses.

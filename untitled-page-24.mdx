@@ -1,0 +1,90 @@
+---
+title: "How to Install Dynmap on a Minecraft Server"
+---
+
+Dynmap lets you turn your Minecraft world into an interactive map that can be viewed from a web browser. Depending on the configuration, players can use the map to explore the world and see the locations of players who are currently online.
+
+Dynmap is available for several Minecraft server platforms and mod loaders. Download the release that matches your setup from [Modrinth](https://modrinth.com/plugin/dynmap).
+
+## Install Dynmap
+
+Before installing Dynmap, make sure your server is running a supported platform such as Paper, Spigot, Bukkit, Forge, or Fabric.
+
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Stop your Minecraft server from the **Console** page.
+3. Open **Files**.
+4. Upload the Dynmap JAR to the correct directory:
+   - **Paper/Spigot/Bukkit:** `plugins`
+   - **Forge/Fabric:** `mods`
+5. Start the server and allow Dynmap to create its configuration files.
+6. Stop the server once the files have been generated.
+7. Open the **Network** page.
+8. Create an additional **allocation** for Dynmap and copy the port assigned to it. Adding a note to the allocation can help you identify it later.
+9. Return to **Files** and locate Dynmap's configuration directory.
+   - For plugin installations, this is normally `plugins/dynmap`.
+   - Modded installations may place the configuration under `config` or within the world directory.
+10. Open `configuration.txt`.
+11. Locate:
+    ```text
+    webserver-port:
+    ```
+12. Enter the port assigned to Dynmap and save the file.
+13. Start the server.
+
+Dynmap should now start its web server using the allocation you configured.
+
+## Open the Dynmap Web Map
+
+To access the map, combine your server's address with the Dynmap web server port.
+
+For example, if the server address is `127.0.0.1` and Dynmap is using port `4444`, open:
+
+```text
+http://127.0.0.1:4444
+```
+
+The Dynmap interface should load in your browser once the web server is available.
+
+### Using a Domain or HTTPS
+
+If you want Dynmap to be accessible through a custom domain or protected with HTTPS, place a reverse proxy in front of the Dynmap web server which can be done within the panel.
+
+## Store Dynmap Data in a Database
+
+By default, Dynmap stores its map data on the server's local storage. You can configure it to use a database instead, which can help reduce the amount of disk space consumed by map tile data over time.
+
+**Stop your Minecraft server before changing the database configuration.**
+
+### Create a Database
+
+1. Open the **Databases** section of the game panel.
+2. Select **New Database**.
+3. Enter a name for the database, such as `dynmap`.
+4. If you already have an unused database available, you can use that instead.
+5. Select the view icon beside the database to display its connection information.
+6. Keep the database details available while completing the remaining steps. Opening them in another browser tab can make this easier.
+
+### Configure Dynmap
+
+1. Return to **Files**.
+2. Open Dynmap's `configuration.txt` file.
+3. Find the `storage` configuration section.
+4. Locate the following settings:
+   ```text
+   type
+   hostname
+   port
+   database
+   userid
+   password
+   ```
+5. Remove the `#` character from the beginning of each setting so they are enabled.
+6. Copy the database **endpoint** into `hostname`. If the endpoint includes a port, remove the port from the hostname value.
+7. Enter the database port separately in the `port` setting.
+8. Set `database` to the name of the database you created.
+9. Copy the database username into `userid`.
+10. Enter the database password into `password`.
+11. Save `configuration.txt`.
+12. Start the Minecraft server.
+
+Dynmap will now use the configured database for storing its map tile data instead of keeping those tiles directly on the server's local disk.
