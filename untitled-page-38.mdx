@@ -1,0 +1,34 @@
+---
+title: "How to Give Yourself Admin Access on a Palworld Server"
+---
+
+Palworld server administrators can use special commands to manage players and control different aspects of the server. Before you can use these commands, you need to configure an admin password and authenticate yourself in-game.
+
+## Configure the Admin Password
+
+1. Log in to the [game panel](https://gamepanel.fourseasonshosting.com) and open your Palworld server.
+2. Select the **Startup** page.
+3. Locate **Admin Password (**`ADMIN_PASSWORD`**)**.
+4. Enter the password you want to use for administrator access.
+5. Use only letters, numbers, dashes, and underscores in the password. Avoid spaces, quotation marks, and other special characters because the same password is also used for RCON and the REST API.
+6. Save the configuration.
+7. Restart your server.
+
+## Activate Admin Permissions In-Game
+
+After the server has restarted:
+
+1. Join your Palworld server.
+2. Open the in-game chat.
+3. Enter the following command, replacing `<password>` with the admin password you configured:
+   ```text
+   /AdminPassword <password>
+   ```
+4. Submit the command.
+5. Palworld will display a message indicating whether the password was accepted.
+
+If the password is correct, your account will have access to the available administrator commands.
+
+> **Important:** Keep your admin password private and only provide it to people you trust. The password also provides access to RCON and the REST API.
+
+You must run `/AdminPassword <password>` again after reconnecting to the server.
