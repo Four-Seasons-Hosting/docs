@@ -1,0 +1,61 @@
+---
+title: "How to Change the Map on a BeamMP Server"
+---
+
+Your BeamMP server's active map is controlled through the **Map (**`MAP`**)** startup variable. You can switch between maps without manually editing the server configuration.
+
+## Change the Active Map
+
+1. Sign in to the [game panel](https://gamepanel.fourseasonshosting.com).
+2. Open your BeamMP server.
+3. Stop the server.
+4. Navigate to **Startup**.
+5. Locate **Map (**`MAP`**)**.
+6. Enter the path to the map's `info.json` file.
+7. Start the server.
+
+The server will load the selected map during startup.
+
+## Available [BeamNG.drive](http://BeamNG.drive) Maps
+
+BeamMP can load the standard levels included with [BeamNG.drive](http://BeamNG.drive). Some commonly available map paths include:
+
+```text
+/levels/gridmap_v2/info.json
+/levels/automation_test_track/info.json
+/levels/east_coast_usa/info.json
+/levels/hirochi_raceway/info.json
+/levels/italy/info.json
+/levels/jungle_rock_island/info.json
+/levels/industrial/info.json
+/levels/small_island/info.json
+/levels/smallgrid/info.json
+/levels/utah/info.json
+/levels/west_coast_usa/info.json
+/levels/driver_training/info.json
+/levels/derby/info.json
+```
+
+Enter one of these paths into the **Map (**`MAP`**)** field to use the corresponding stock map.
+
+## Using a Custom Map
+
+Custom BeamNG maps can also be loaded through BeamMP.
+
+First, install the map on your server:
+
+1. Open **Files** in the game panel.
+2. Upload the map resource to the `Resources/Client` directory.
+3. Make sure the map's files are arranged according to the structure provided by the map creator.
+
+You can find additional information about installing server modifications in [How to mod your BeamMP server](how-to-mod-your-beammp-server.md).
+
+After uploading the map, return to **Startup** and update the **Map (**`MAP`**)** value with the path to the map's `info.json` file.
+
+For example:
+
+```text
+/levels/my_custom_map/info.json
+```
+
+The exact level path depends on how the custom map was packaged. If the map does not load, check the documentation or files included with the map to find its correct `info.json` location.

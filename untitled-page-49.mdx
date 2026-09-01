@@ -1,0 +1,58 @@
+---
+title: "How to Configure a BeamMP Server"
+---
+
+BeamMP configuration is handled through two different areas of your game server. Basic server options are managed from the **Startup** page, while additional settings can be changed directly in `ServerConfig.toml`.
+
+Knowing which settings belong in each location is important because the game panel automatically manages certain values when the server starts.
+
+## Configure the Server from Startup
+
+The **Startup** page contains the main settings commonly needed to configure your BeamMP server.
+
+Available options include:
+
+- **Server Name (**`NAME`**)**: Controls the name displayed in the BeamMP server browser.
+- **Server Description (**`DESCRIPTION`**)**: Sets the description shown to players.
+- **Authentication Key (**`AUTHKEY`**)**: The BeamMP Keymaster authentication key used by your server.
+- **Max Players (**`MAX_PLAYERS`**)**: Sets the maximum number of players who can connect.
+- **Private (**`PRIVATE`**)**: Prevents the server from appearing on the public server list.
+- **Max Cars (**`MAX_CARS`**)**: Controls how many vehicles each player can have spawned.
+- **Map (**`MAP`**)**: Determines which [BeamNG.drive](http://BeamNG.drive) map the server loads.
+- **Chat Logging (**`LOGCHAT`**)**: Controls whether server chat is recorded in the logs.
+- **BeamMP Server Version (**`VERSION`**)**: Selects the BeamMP server version.
+
+The panel applies these settings to `ServerConfig.toml` whenever the server starts.
+
+> **Important:** Do not manually change these panel-managed settings inside `ServerConfig.toml`. Any changes made there will be replaced with the values configured on the **Startup** page during the next server startup.
+
+## Configure Advanced Options
+
+Settings that are not available through the Startup page can be changed directly in `ServerConfig.toml`.
+
+Examples include:
+
+- `Debug`
+- `AllowGuests`
+- `Tags`
+- Resource synchronization settings
+- Other advanced BeamMP configuration options
+
+To edit the file:
+
+1. Sign in to the [game panel](https://gamepanel.fourseasonshosting.com).
+2. Open your BeamMP server.
+3. Stop the server.
+4. Select **Files**.
+5. Open `ServerConfig.toml` from the server's root directory.
+6. Make the required changes.
+7. Save the file.
+8. Start the server again.
+
+## Do Not Change the Port
+
+Avoid manually modifying the `Port` value in `ServerConfig.toml`.
+
+The game panel automatically assigns the port using your server's **primary allocation**. Changing this value manually can cause the BeamMP server to listen on the wrong port, preventing players from connecting.
+
+If you need to change the port your server uses, manage the allocation through the **Network** section of the game panel instead.

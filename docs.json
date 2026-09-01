@@ -14,7 +14,7 @@
       {
         "group": "FAQ",
         "pages": [
-          "untitled-page"
+          "untitled-page-51"
         ]
       },
       {
@@ -75,12 +75,29 @@
             "pages": [
               "untitled-page-38"
             ]
+          },
+          {
+            "group": "BeamMP",
+            "pages": [
+              "untitled-page-47",
+              "untitled-page-48",
+              "untitled-page-49",
+              "untitled-page-50"
+            ]
           }
         ]
       },
       {
         "group": "VPS Docs",
-        "pages": []
+        "pages": [
+          "untitled-page-40",
+          "untitled-page-41",
+          "untitled-page-42",
+          "untitled-page-43",
+          "untitled-page-44",
+          "untitled-page-45",
+          "untitled-page-46"
+        ]
       }
     ]
   },

@@ -1,0 +1,34 @@
+---
+title: "How to Add Tags to Your BeamMP Server"
+---
+
+BeamMP server tags help players understand what type of experience your server offers and make it easier to find through server-list filters.
+
+Examples of tags you might use include `Freeroam`, `Racing`, or `Custom`.
+
+Tags are configured directly inside your server's `ServerConfig.toml` file.
+
+## Add or Change Server Tags
+
+1. Sign in to the [game panel](https://gamepanel.fourseasonshosting.com).
+2. Open your BeamMP server.
+3. Stop the server before editing its configuration.
+4. Go to **Files**.
+5. Open `ServerConfig.toml` from the server's main directory.
+6. Locate the `Tags` setting.
+7. Enter the tags you want to display. For example:
+   ```text
+   Tags = "Freeroam,Custom"
+   ```
+8. Save the file.
+9. Start the server.
+
+You can replace the example tags with any appropriate tags supported by BeamMP.
+
+## Important Information
+
+The game panel does not overwrite the `Tags` setting when the server starts, so changes made directly to `ServerConfig.toml` will remain in place after restarts.
+
+Tags are primarily useful for servers listed publicly. Make sure **Private (**`PRIVATE`**)** is set to `false` on the **Startup** page if you want your server to appear in the public BeamMP server browser.
+
+Private servers are hidden from the public list, so their tags will not provide much benefit.

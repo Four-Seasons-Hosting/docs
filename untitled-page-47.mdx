@@ -1,0 +1,37 @@
+---
+title: "How to Generate and Configure a BeamMP Authentication Key"
+---
+
+BeamMP servers require an authentication key before they can properly start and register with the BeamMP server list. You can generate a key for free through the BeamMP Keymaster using your Discord account.
+
+## Generate an Authentication Key
+
+1. Open the [BeamMP Keymaster](https://keymaster.beammp.com).
+2. Sign in using your Discord account.
+3. Navigate to the **Keys** section.
+4. Select the green **\+** button to create a new key.
+5. Enter a name for the key. This name is only used to help identify it in your Keymaster account.
+6. Select **Create**.
+7. Locate the newly generated key and use the clipboard button to copy it.
+
+Keep the authentication key private. Do not post it publicly or include it in screenshots or support requests.
+
+## Add the Key to Your BeamMP Server
+
+Once you have copied the key, add it to your server through the game panel.
+
+1. Log in to the [game panel](https://gamepanel.fourseasonshosting.com).
+2. Open your BeamMP server.
+3. Stop the server if it is currently running.
+4. Go to the **Startup** page.
+5. Find **Authentication Key (**`AUTHKEY`**)**.
+6. Paste the key you copied from BeamMP Keymaster into the field.
+7. Start the server.
+
+The panel automatically places the authentication key into `ServerConfig.toml` when the server starts, so you do not need to manually edit the configuration file.
+
+## Reusing an Existing Key
+
+A BeamMP authentication key is intended to be associated with one server at a time.
+
+If you rebuild, reinstall, or move your server, use the existing authentication key rather than generating another key for the same server. Creating additional keys unnecessarily can prevent the authentication system from working as expected.
