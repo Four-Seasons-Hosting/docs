@@ -90,6 +90,7 @@
       {
         "group": "VPS Docs",
         "pages": [
+          "vps/windows-password-lockout",
           "untitled-page-40",
           "untitled-page-41",
           "untitled-page-42",
