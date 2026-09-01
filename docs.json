@@ -73,16 +73,16 @@
           {
             "group": "Palworld",
             "pages": [
-              "untitled-page-38"
+              "palworld/admin-access"
             ]
           },
           {
             "group": "BeamMP",
             "pages": [
-              "untitled-page-47",
-              "untitled-page-48",
-              "untitled-page-49",
-              "untitled-page-50"
+              "beammp/auth-key",
+              "beammp/change-map",
+              "beammp/configure-server",
+              "beammp/server-tags"
             ]
           }
         ]
@@ -168,6 +168,31 @@
     {
       "source": "/untitled-page-46",
       "destination": "/vps/cancel-service",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-38",
+      "destination": "/palworld/admin-access",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-47",
+      "destination": "/beammp/auth-key",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-48",
+      "destination": "/beammp/change-map",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-49",
+      "destination": "/beammp/configure-server",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-50",
+      "destination": "/beammp/server-tags",
       "permanent": true
     }
   ]
