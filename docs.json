@@ -90,13 +90,13 @@
       {
         "group": "VPS Docs",
         "pages": [
-          "untitled-page-40",
-          "untitled-page-41",
-          "untitled-page-42",
-          "untitled-page-43",
-          "untitled-page-44",
-          "untitled-page-45",
-          "untitled-page-46"
+          "vps/windows-password-lockout",
+          "vps/create-vps",
+          "vps/developer-access",
+          "vps/windows-login",
+          "vps/open-ports",
+          "vps/reset-password",
+          "vps/cancel-service"
         ]
       }
     ]
@@ -133,5 +133,42 @@
       "linkedin": "https://linkedin.com/company/mintlify"
     }
   },
-  "logo": "/images/FSHORIGINAL.png"
+  "logo": "/images/FSHORIGINAL.png",
+  "redirects": [
+    {
+      "source": "/untitled-page-40",
+      "destination": "/vps/windows-password-lockout",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-41",
+      "destination": "/vps/create-vps",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-42",
+      "destination": "/vps/developer-access",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-43",
+      "destination": "/vps/windows-login",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-44",
+      "destination": "/vps/open-ports",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-45",
+      "destination": "/vps/reset-password",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-46",
+      "destination": "/vps/cancel-service",
+      "permanent": true
+    }
+  ]
 }
