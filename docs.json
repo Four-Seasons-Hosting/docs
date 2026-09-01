@@ -53,6 +53,10 @@
                   "minecraft/mods-and-plugins",
                   "minecraft/simple-voice-chat",
                   "minecraft/spark",
+                  "minecraft/worldedit",
+                  "minecraft/op-yourself",
+                  "minecraft/pregen-chunks",
+                  "minecraft/server-icon",
                   "untitled-page-24",
                   "untitled-page-19",
                   "minecraft/enable-command-blocks",
@@ -75,10 +79,6 @@
                   "untitled-page-16",
                   "untitled-page-17",
                   "untitled-page-18",
-                  "untitled-page-30",
-                  "untitled-page-31",
-                  "untitled-page-32",
-                  "untitled-page-33",
                   "untitled-page-34",
                   "untitled-page-35",
                   "untitled-page-36",
@@ -355,6 +355,26 @@
     {
       "source": "/untitled-page-29",
       "destination": "/minecraft/spark",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-30",
+      "destination": "/minecraft/worldedit",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-31",
+      "destination": "/minecraft/op-yourself",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-32",
+      "destination": "/minecraft/pregen-chunks",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-33",
+      "destination": "/minecraft/server-icon",
       "permanent": true
     }
   ]
