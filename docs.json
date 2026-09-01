@@ -27,6 +27,8 @@
               "minecraft/cant-build",
               "minecraft/cant-join-modded",
               "minecraft/cant-keep-up",
+              "minecraft/common-lag-causes",
+              "minecraft/restart-frequency",
               {
                 "group": "How to's",
                 "pages": [
@@ -65,12 +67,7 @@
                   "untitled-page-36",
                   "untitled-page-37"
                 ]
-              },
-              "untitled-page-3",
-              "untitled-page-7",
-              "untitled-page-8",
-              "untitled-page-9",
-              "untitled-page-10"
+              }
             ]
           },
           {
@@ -201,6 +198,26 @@
     {
       "source": "/untitled-page-51",
       "destination": "/faq/coming-soon",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-3",
+      "destination": "/minecraft/cant-build",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-7",
+      "destination": "/minecraft/cant-join-modded",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-8",
+      "destination": "/minecraft/cant-keep-up",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-9",
+      "destination": "/minecraft/common-lag-causes",
       "permanent": true
     }
   ]
