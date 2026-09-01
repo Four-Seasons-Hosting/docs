@@ -139,6 +139,36 @@
       "source": "/untitled-page-40",
       "destination": "/vps/windows-password-lockout",
       "permanent": true
+    },
+    {
+      "source": "/untitled-page-41",
+      "destination": "/vps/create-vps",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-42",
+      "destination": "/vps/developer-access",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-43",
+      "destination": "/vps/windows-login",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-44",
+      "destination": "/vps/open-ports",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-45",
+      "destination": "/vps/reset-password",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-46",
+      "destination": "/vps/cancel-service",
+      "permanent": true
     }
   ]
 }
