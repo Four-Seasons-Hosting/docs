@@ -1,0 +1,38 @@
+---
+title: "How to Install and Configure LuckPerms on a Minecraft Server"
+---
+
+Minecraft's **Online Mode** determines whether your server verifies a player's account with Mojang's authentication services before allowing them to connect.
+
+When Online Mode is enabled, players are authenticated before joining and their Minecraft account information, including their skin, can be verified. Turning this option off allows connections without this authentication check.
+
+<Warning>
+  > **Warning:** Disabling Online Mode introduces security risks. Players can connect using another person's username, including an administrator's or your own. If you disable Online Mode, strongly consider using an authentication plugin and securing your server appropriately.
+</Warning>
+
+## Disable Online Mode
+
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open your Minecraft server and stop it from the **Console** page.
+3. Navigate to **Files** and open `server.properties`.
+4. Locate the `online-mode=` setting.
+5. Change the value from:
+   ```text
+   online-mode=true
+   ```
+   to:
+   ```text
+   online-mode=false
+   ```
+6. Save the configuration file.
+7. Start the server from the **Console**.
+
+Your server will now operate without performing the standard Minecraft account authentication check.
+
+## When Should Online Mode Be Disabled?
+
+One common reason is when using a **Minecraft proxy**, such as BungeeCord or Velocity, to connect multiple servers.
+
+In a proxy configuration, the proxy can handle player authentication while the individual backend servers operate with Online Mode disabled. Backend servers should also be properly protected with firewall rules so they cannot be accessed directly by players.
+
+Only connections coming through your proxy should be allowed to reach the backend servers. This helps prevent players from bypassing the proxy and connecting directly to an unauthenticated backend.
