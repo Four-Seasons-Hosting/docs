@@ -43,8 +43,8 @@
                   "minecraft/reset-world",
                   "minecraft/reset-player-data",
                   "minecraft/luckperms",
+                  "minecraft/latest-log",
                   "minecraft/spawn-protection",
-                  "untitled-page-20",
                   "untitled-page-21",
                   "untitled-page-22",
                   "untitled-page-23",
@@ -249,6 +249,46 @@
     {
       "source": "/untitled-page-11",
       "destination": "/minecraft/resource-pack",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-12",
+      "destination": "/minecraft/simulation-distance",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-13",
+      "destination": "/minecraft/view-distance",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-14",
+      "destination": "/minecraft/mob-spawn-rates",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-15",
+      "destination": "/minecraft/reset-world",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-16",
+      "destination": "/minecraft/reset-player-data",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-17",
+      "destination": "/minecraft/disable-chat-reporting",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-18",
+      "destination": "/minecraft/luckperms",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-20",
+      "destination": "/minecraft/latest-log",
       "permanent": true
     }
   ]
