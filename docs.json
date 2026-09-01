@@ -219,6 +219,11 @@
       "source": "/untitled-page-9",
       "destination": "/minecraft/common-lag-causes",
       "permanent": true
+    },
+    {
+      "source": "/untitled-page-10",
+      "destination": "/minecraft/restart-frequency",
+      "permanent": true
     }
   ]
 }
