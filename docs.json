@@ -64,6 +64,7 @@
                   "minecraft/change-seed",
                   "minecraft/velocity-proxy",
                   "minecraft/whitelist",
+                  "minecraft/voting",
                   "minecraft/view-distance",
                   "minecraft/disable-chat-reporting",
                   "minecraft/enable-flight",
@@ -85,8 +86,7 @@
                   "untitled-page-30",
                   "untitled-page-31",
                   "untitled-page-32",
-                  "untitled-page-33",
-                  "untitled-page-37"
+                  "untitled-page-33"
                 ]
               },
               "untitled-page-3",
