@@ -395,6 +395,11 @@
       "source": "/untitled-page-36",
       "destination": "/minecraft/velocity-proxy",
       "permanent": true
+    },
+    {
+      "source": "/untitled-page-37",
+      "destination": "/minecraft/voting",
+      "permanent": true
     }
   ]
 }
