@@ -2,99 +2,37 @@
 title: "How to Install and Configure LuckPerms on a Minecraft Server"
 ---
 
-LuckPerms is a permissions management system for Minecraft servers. It allows you to organize players into groups and control which commands and features each group can access.
+Minecraft's **Online Mode** determines whether your server verifies a player's account with Mojang's authentication services before allowing them to connect.
 
-LuckPerms supports multiple Minecraft server platforms and can also be used to manage chat prefixes and other group metadata.
+When Online Mode is enabled, players are authenticated before joining and their Minecraft account information, including their skin, can be verified. Turning this option off allows connections without this authentication check.
 
-This guide covers the basic setup. For advanced permissions management, refer to the official LuckPerms documentation.
+<Warning>
+  > **Warning:** Disabling Online Mode introduces security risks. Players can connect using another person's username, including an administrator's or your own. If you disable Online Mode, strongly consider using an authentication plugin and securing your server appropriately.
+</Warning>
 
-## Install LuckPerms
+## Disable Online Mode
 
-LuckPerms provides separate downloads depending on the Minecraft platform your server uses.
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open your Minecraft server and stop it from the **Console** page.
+3. Navigate to **Files** and open `server.properties`.
+4. Locate the `online-mode=` setting.
+5. Change the value from:
+   ```text
+   online-mode=true
+   ```
+   to:
+   ```text
+   online-mode=false
+   ```
+6. Save the configuration file.
+7. Start the server from the **Console**.
 
-Download the appropriate version from the [LuckPerms download page](https://luckperms.net/download), then install it using the steps below.
+Your server will now operate without performing the standard Minecraft account authentication check.
 
-1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
-2. Stop your server.
-3. Open **Files**.
-4. Select the directory that matches your server platform:
-   - **Paper, Spigot, or Bukkit:** `plugins`
-   - **Forge or Fabric:** `mods`
-5. Upload the LuckPerms JAR file.
-6. Start the server.
+## When Should Online Mode Be Disabled?
 
-LuckPerms will create its required files when the server starts.
+One common reason is when using a **Minecraft proxy**, such as BungeeCord or Velocity, to connect multiple servers.
 
-## Manage Groups and Permissions
+In a proxy configuration, the proxy can handle player authentication while the individual backend servers operate with Online Mode disabled. Backend servers should also be properly protected with firewall rules so they cannot be accessed directly by players.
 
-LuckPerms includes a browser-based editor that makes managing permissions much easier than manually editing configuration files.
-
-From the server **Console**, run:
-
-```text
-lp editor
-```
-
-You can also use:
-
-```text
-luckperms editor
-```
-
-LuckPerms will provide a URL. Open that URL in your browser to access the editor.
-
-From the web editor, you can:
-
-- Create and remove groups
-- Add or remove permission nodes
-- Assign players to groups
-- Configure group inheritance
-- Set prefixes and other metadata
-
-Use the **plus** button to create a group, then enter permission nodes using the permission field near the bottom of the editor.
-
-When you are finished making changes, select **Save**. LuckPerms will provide a command that you can run from your server console to apply the configuration.
-
-## Add a Group Prefix
-
-Prefixes allow you to display a label before a player's name, such as a staff rank or role.
-
-To assign a prefix to a group, add a metadata entry using the following format:
-
-```text
-prefix.<weight>.<prefix>
-```
-
-For example:
-
-```text
-prefix.22.&a&l{&6Head Admin&a&l} &r
-```
-
-The number after `prefix` is the **weight**. When a player belongs to multiple groups with prefixes, LuckPerms uses the appropriate weight to determine which prefix takes priority.
-
-For example, if a player belongs to both an `Admin` group and a `Head Admin` group, assigning the Head Admin prefix a higher weight allows it to take precedence.
-
-## Display Prefixes in Chat
-
-Creating a prefix in LuckPerms does not automatically make it appear in Minecraft chat. You also need a chat system that reads LuckPerms metadata and formats player messages.
-
-You can use a compatible chat plugin such as [ChatEx Continued](https://www.spigotmc.org/resources/chatex-continued.71041/) or [EssentialsX](https://essentialsx.net/downloads.html) with the **EssentialsXChat** component.
-
-Once the chat plugin is installed and configured to use LuckPerms prefixes, your group prefixes can appear alongside player names.
-
-## Assign Permissions to Players and Groups
-
-Minecraft plugins generally use permission nodes to determine whether a player can use a particular command or feature.
-
-The exact permission node depends on the plugin providing the command. Check the documentation for the plugin you want to configure to find its available permission nodes.
-
-For example, EssentialsX documents its permissions [here](https://essinfo.xeya.me/permissions.html).
-
-If you wanted to allow a group to use the EssentialsX `/afk` command, you would assign:
-
-```text
-essentials.afk
-```
-
-Once the permission has been added to the appropriate LuckPerms group, members of that group will be able to use the command.
+Only connections coming through your proxy should be allowed to reach the backend servers. This helps prevent players from bypassing the proxy and connecting directly to an unauthenticated backend.
