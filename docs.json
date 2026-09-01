@@ -32,6 +32,27 @@
               {
                 "group": "How to's",
                 "pages": [
+                  "untitled-page-4",
+                  "untitled-page-5",
+                  "untitled-page-6",
+                  "untitled-page-11",
+                  "untitled-page-12",
+                  "untitled-page-13",
+                  "untitled-page-14",
+                  "untitled-page-15",
+                  "untitled-page-16",
+                  "untitled-page-17",
+                  "untitled-page-18",
+                  "untitled-page-19",
+                  "untitled-page-20",
+                  "untitled-page-21",
+                  "untitled-page-22",
+                  "untitled-page-23",
+                  "minecraft/geyser",
+                  "minecraft/essentialsx",
+                  "minecraft/mods-and-plugins",
+                  "untitled-page-24",
+                  "untitled-page-19",
                   "minecraft/enable-command-blocks",
                   "minecraft/simulation-distance",
                   "minecraft/view-distance",
@@ -49,8 +70,9 @@
                   "minecraft/bluemap",
                   "minecraft/dynmap",
                   "minecraft/spawn-protection",
-                  "untitled-page-26",
-                  "untitled-page-25",
+                  "untitled-page-16",
+                  "untitled-page-17",
+                  "untitled-page-18",
                   "untitled-page-27",
                   "untitled-page-28",
                   "untitled-page-29",
@@ -309,6 +331,16 @@
     {
       "source": "/untitled-page-24",
       "destination": "/minecraft/dynmap",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-26",
+      "destination": "/minecraft/geyser",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-25",
+      "destination": "/minecraft/essentialsx",
       "permanent": true
     }
   ]
