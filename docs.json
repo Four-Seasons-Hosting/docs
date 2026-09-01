@@ -51,6 +51,8 @@
                   "minecraft/geyser",
                   "minecraft/essentialsx",
                   "minecraft/mods-and-plugins",
+                  "minecraft/simple-voice-chat",
+                  "minecraft/spark",
                   "untitled-page-24",
                   "untitled-page-19",
                   "minecraft/enable-command-blocks",
@@ -73,9 +75,6 @@
                   "untitled-page-16",
                   "untitled-page-17",
                   "untitled-page-18",
-                  "untitled-page-27",
-                  "untitled-page-28",
-                  "untitled-page-29",
                   "untitled-page-30",
                   "untitled-page-31",
                   "untitled-page-32",
@@ -341,6 +340,21 @@
     {
       "source": "/untitled-page-25",
       "destination": "/minecraft/essentialsx",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-27",
+      "destination": "/minecraft/mods-and-plugins",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-28",
+      "destination": "/minecraft/simple-voice-chat",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-29",
+      "destination": "/minecraft/spark",
       "permanent": true
     }
   ]
