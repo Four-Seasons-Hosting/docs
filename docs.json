@@ -305,6 +305,11 @@
       "source": "/untitled-page-23",
       "destination": "/minecraft/bluemap",
       "permanent": true
+    },
+    {
+      "source": "/untitled-page-24",
+      "destination": "/minecraft/dynmap",
+      "permanent": true
     }
   ]
 }
