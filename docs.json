@@ -61,6 +61,9 @@
                   "untitled-page-19",
                   "minecraft/enable-command-blocks",
                   "minecraft/simulation-distance",
+                  "minecraft/change-seed",
+                  "minecraft/velocity-proxy",
+                  "minecraft/whitelist",
                   "minecraft/view-distance",
                   "minecraft/disable-chat-reporting",
                   "minecraft/enable-flight",
@@ -79,8 +82,10 @@
                   "untitled-page-16",
                   "untitled-page-17",
                   "untitled-page-18",
-                  "untitled-page-34",
-                  "untitled-page-35",
+                  "untitled-page-30",
+                  "untitled-page-31",
+                  "untitled-page-32",
+                  "untitled-page-33",
                   "untitled-page-36",
                   "untitled-page-37"
                 ]
@@ -375,6 +380,16 @@
     {
       "source": "/untitled-page-33",
       "destination": "/minecraft/server-icon",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-34",
+      "destination": "/minecraft/change-seed",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-35",
+      "destination": "/minecraft/whitelist",
       "permanent": true
     }
   ]
