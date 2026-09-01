@@ -86,7 +86,6 @@
                   "untitled-page-31",
                   "untitled-page-32",
                   "untitled-page-33",
-                  "untitled-page-36",
                   "untitled-page-37"
                 ]
               },
@@ -390,6 +389,11 @@
     {
       "source": "/untitled-page-35",
       "destination": "/minecraft/whitelist",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-36",
+      "destination": "/minecraft/velocity-proxy",
       "permanent": true
     }
   ]

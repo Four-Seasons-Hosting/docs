@@ -1,3 +1,128 @@
 ---
 title: "How to Configure a Velocity Proxy for Minecraft"
 ---
+
+Velocity allows you to place a proxy in front of multiple Minecraft servers. Instead of connecting directly to individual servers, players connect to the Velocity proxy and can then be sent to different backend servers such as a lobby, survival server, or minigames server.
+
+You will need a dedicated server for Velocity along with each Minecraft server you want to connect to it.
+
+## Configure the Velocity Proxy
+
+Velocity is installed manually using its server JAR.
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open the server you want to use for the proxy.
+3. Stop the server from the **Console** page.
+4. Download the latest Velocity release from [PaperMC](https://papermc.io/downloads/velocity).
+5. Open **Files** and upload the Velocity JAR to the server's main directory.
+6. Go to **Startup**.
+7. Set **Server Jar File (**`SERVER_JARFILE`**)** to the exact name of the uploaded JAR, such as:
+   ```text
+   velocity.jar
+   ```
+8. You can optionally set **Flag Preset (**`FLAG_PRESET`**)** to **Velocity Proxy** to use a lightweight set of startup flags intended for proxy servers.
+9. Start the server once.
+10. Allow Velocity to finish its initial setup, then stop the server again.
+
+The first startup creates several configuration files, including `velocity.toml` and `forwarding.secret`.
+
+> **Security:** Keep `forwarding.secret` private. Anyone who obtains the secret may be able to impersonate a trusted backend connection.
+
+### Configure a Custom Forwarding Secret
+
+Velocity automatically generates a forwarding secret for you. If you want to use your own value:
+
+1. Open `forwarding.secret` from **Files**.
+2. Replace the existing contents with your chosen secret.
+3. Save the file.
+
+Make sure the same secret is configured on every backend server.
+
+## Add Your Backend Servers
+
+The `velocity.toml` file controls which Minecraft servers are available through the proxy.
+
+1. Open `velocity.toml` from **Files**.
+2. Find the `[servers]` section.
+3. Add an entry for each backend server.
+4. Use the server's **primary allocation** from its **Network** page.
+
+For example:
+
+```text
+[servers]
+hub = "your.server.address:port"
+minigames = "your.server.address:port2"
+try = ["hub"]
+```
+
+The names you use, such as `hub` and `minigames`, are simply identifiers that Velocity uses when referring to each backend.
+
+If you are not using domain-based routing, you can remove the `[forced-hosts]` section from `velocity.toml`.
+
+Save the configuration when finished.
+
+## Configure the Backend Servers
+
+Every Minecraft server that connects to Velocity needs to be configured to accept connections through the proxy.
+
+Repeat the following steps for each backend server:
+
+1. Stop the server.
+2. Open **Files**.
+3. Open `server.properties`.
+4. Find:
+   ```text
+   online-mode=true
+   ```
+5. Change it to:
+   ```text
+   online-mode=false
+   ```
+6. Save the file.
+7. Open `config/paper-global.yml`.
+8. Locate the `proxies` section.
+9. Enable Velocity support:
+   ```text
+   velocity:
+     enabled: true
+   ```
+10. Set `velocity.secret` to the same value stored in the proxy's `forwarding.secret`.
+11. Save the configuration.
+12. Start the server.
+
+> **Important:** Backend servers should not be publicly accessible when using a proxy. Ideally, firewall the backend servers so players can only reach them through Velocity.
+
+## Connecting to the Network
+
+Players should use the address and port assigned to the **Velocity proxy** when connecting.
+
+They should not connect directly to the addresses of the backend servers.
+
+Once connected to Velocity, players can be transferred between the servers configured in `velocity.toml`.
+
+## Troubleshooting
+
+### Players Cannot Connect
+
+Verify that:
+
+- The player is connecting to the proxy address rather than a backend server.
+- The Velocity server is running.
+- Every backend address in `velocity.toml` is correct.
+- The backend servers are running.
+- The required network ports are accessible.
+
+### Forwarding Errors
+
+If players receive an error during login, check `velocity.toml` and make sure the forwarding mode is configured correctly:
+
+```text
+player-info-forwarding-mode = "modern"
+```
+
+Modern forwarding allows Velocity to securely pass information such as player UUIDs and IP addresses to compatible backend servers.
+
+Also verify that the forwarding secret on every backend matches the secret configured on the proxy.
+
+If the network still does not work after checking these settings, review the proxy and backend console logs for additional errors or contact Four Seasons Hosting support.
