@@ -45,11 +45,10 @@
                   "minecraft/luckperms",
                   "minecraft/latest-log",
                   "minecraft/custom-modpack",
+                  "minecraft/datapacks",
+                  "minecraft/bluemap",
+                  "minecraft/dynmap",
                   "minecraft/spawn-protection",
-                  "untitled-page-21",
-                  "untitled-page-22",
-                  "untitled-page-23",
-                  "untitled-page-24",
                   "untitled-page-26",
                   "untitled-page-25",
                   "untitled-page-27",
@@ -290,6 +289,21 @@
     {
       "source": "/untitled-page-20",
       "destination": "/minecraft/latest-log",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-21",
+      "destination": "/minecraft/custom-modpack",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-22",
+      "destination": "/minecraft/datapacks",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-23",
+      "destination": "/minecraft/bluemap",
       "permanent": true
     }
   ]
