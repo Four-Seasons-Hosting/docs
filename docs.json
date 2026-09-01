@@ -24,6 +24,9 @@
           {
             "group": "Minecraft",
             "pages": [
+              "minecraft/cant-build",
+              "minecraft/cant-join-modded",
+              "minecraft/cant-keep-up",
               {
                 "group": "How to's",
                 "pages": [
