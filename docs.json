@@ -14,7 +14,7 @@
       {
         "group": "FAQ",
         "pages": [
-          "untitled-page-51"
+          "faq/coming-soon"
         ]
       },
       {
@@ -193,6 +193,11 @@
     {
       "source": "/untitled-page-50",
       "destination": "/beammp/server-tags",
+      "permanent": true
+    },
+    {
+      "source": "/untitled-page-51",
+      "destination": "/faq/coming-soon",
       "permanent": true
     }
   ]
