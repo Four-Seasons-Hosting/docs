@@ -91,7 +91,12 @@
         "group": "VPS Docs",
         "pages": [
           "vps/windows-password-lockout",
-          "untitled-page-40",
+          "vps/create-vps",
+          "vps/developer-access",
+          "vps/windows-login",
+          "vps/open-ports",
+          "vps/reset-password",
+          "vps/cancel-service",
           "untitled-page-41",
           "untitled-page-42",
           "untitled-page-43",
