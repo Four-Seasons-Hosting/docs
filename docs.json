@@ -96,13 +96,7 @@
           "vps/windows-login",
           "vps/open-ports",
           "vps/reset-password",
-          "vps/cancel-service",
-          "untitled-page-41",
-          "untitled-page-42",
-          "untitled-page-43",
-          "untitled-page-44",
-          "untitled-page-45",
-          "untitled-page-46"
+          "vps/cancel-service"
         ]
       }
     ]
@@ -139,5 +133,12 @@
       "linkedin": "https://linkedin.com/company/mintlify"
     }
   },
-  "logo": "/images/FSHORIGINAL.png"
+  "logo": "/images/FSHORIGINAL.png",
+  "redirects": [
+    {
+      "source": "/untitled-page-40",
+      "destination": "/vps/windows-password-lockout",
+      "permanent": true
+    }
+  ]
 }
