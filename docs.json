@@ -32,22 +32,6 @@
               {
                 "group": "How to's",
                 "pages": [
-                  "untitled-page-4",
-                  "untitled-page-5",
-                  "untitled-page-6",
-                  "untitled-page-11",
-                  "untitled-page-12",
-                  "untitled-page-13",
-                  "untitled-page-14",
-                  "untitled-page-15",
-                  "untitled-page-16",
-                  "untitled-page-17",
-                  "untitled-page-18",
-                  "untitled-page-19",
-                  "untitled-page-20",
-                  "untitled-page-21",
-                  "untitled-page-22",
-                  "untitled-page-23",
                   "minecraft/geyser",
                   "minecraft/essentialsx",
                   "minecraft/mods-and-plugins",
@@ -57,8 +41,6 @@
                   "minecraft/op-yourself",
                   "minecraft/pregen-chunks",
                   "minecraft/server-icon",
-                  "untitled-page-24",
-                  "untitled-page-19",
                   "minecraft/enable-command-blocks",
                   "minecraft/simulation-distance",
                   "minecraft/change-seed",
@@ -79,21 +61,9 @@
                   "minecraft/datapacks",
                   "minecraft/bluemap",
                   "minecraft/dynmap",
-                  "minecraft/spawn-protection",
-                  "untitled-page-16",
-                  "untitled-page-17",
-                  "untitled-page-18",
-                  "untitled-page-30",
-                  "untitled-page-31",
-                  "untitled-page-32",
-                  "untitled-page-33"
+                  "minecraft/spawn-protection"
                 ]
-              },
-              "untitled-page-3",
-              "untitled-page-7",
-              "untitled-page-8",
-              "untitled-page-9",
-              "untitled-page-10"
+              }
             ]
           },
           {
