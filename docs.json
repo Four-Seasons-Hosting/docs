@@ -88,6 +88,15 @@
               "beammp/configure-server",
               "beammp/server-tags"
             ]
+          },
+          {
+            "group": "Vintage Story",
+            "pages": [
+              "How-to-Add-an-Admin-to-Your-Vintage-Story-Server",
+              "How-to-Add-Mods-to-Your-Vintage-Story-Server",
+              "How-to-Change-Your-MOTD-for-Vintage-Story",
+              "untitled-page-3"
+            ]
           }
         ]
       },

@@ -1,0 +1,34 @@
+---
+title: "How to Change Your MOTD for Vintage Story"
+---
+
+You can customize the message players see when they connect by editing the `WelcomeMessage` setting in your server configuration.
+
+## Step 1: Stop the Server
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open your Vintage Story server.
+3. Stop the server before editing its configuration files.
+
+## Step 2: Edit the Welcome Message
+
+1. Go to the **Files** section.
+2. Open the `data` folder.
+3. Locate and open `serverconfig.json`.
+4. Search for the `WelcomeMessage` setting.
+5. Change the text inside the quotation marks to your desired message.
+
+You can use `{0}` to automatically insert the username of the player joining the server. For example:
+
+```text
+"WelcomeMessage": "Welcome {0}, enjoy your time on the server!"
+```
+
+Make sure the message remains enclosed in double quotes so the JSON file stays valid.
+
+## Step 3: Save and Restart
+
+1. Save your changes to `serverconfig.json`.
+2. Start your Vintage Story server.
+
+Your custom message will be displayed to players when they join the server and will also appear in the public server listing.
