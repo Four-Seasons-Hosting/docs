@@ -75,12 +75,6 @@
             ]
           },
           {
-            "group": "Palworld",
-            "pages": [
-              "palworld/admin-access"
-            ]
-          },
-          {
             "group": "BeamMP",
             "pages": [
               "beammp/auth-key",
