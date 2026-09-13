@@ -1,0 +1,29 @@
+---
+title: "How to List Your Vintage Story Server on the Public Server List"
+---
+
+Vintage Story servers can be advertised publicly so other players can find them through the game's server browser.
+
+## Enable Public Listing
+
+1. Sign in to the game panel at `gamepanel.fourseasonshosting.com` and select your Vintage Story server.
+2. Stop the server if it is currently running.
+3. Open the **Startup** section.
+4. Locate the **Advertise To Public List** (`ADVERTISE_SERVER`) setting.
+5. Change the value to `true`.
+6. Start the server.
+
+After the server starts, it should become visible in the public Vintage Story server browser.
+
+## Customize Your Listing
+
+The information displayed in the public browser is controlled by the following Startup variables:
+
+- **Server Name** (`SERVER_NAME`) sets the name players see.
+- **Server Description** (`SERVER_DESCRIPTION`) controls the description shown for your server.
+
+Choose a clear and recognizable name and description before enabling public advertising.
+
+### Removing Your Server From the Public List
+
+If you no longer want your server publicly listed, return to the **Startup** page, change `ADVERTISE_SERVER` to `false`, and restart the server.

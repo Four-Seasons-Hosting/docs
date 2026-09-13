@@ -1,0 +1,38 @@
+---
+title: "How to Upload a Vintage Story Save to Your Server"
+---
+
+You can transfer a single-player Vintage Story world to your server by uploading the save file and setting the server to load it.
+
+Before replacing your current world, stop the server and create a backup from the **Backups** section.
+
+## Step 1: Locate Your Save
+
+1. On your computer, press `Win + R`.
+2. Enter `%appdata%` and press **Enter**.
+3. Open the `VintagestoryData` folder.
+4. Open the `Saves` folder.
+5. Locate the world save you want to transfer.
+
+## Step 2: Upload the Save
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com`.
+2. Open your Vintage Story server.
+3. Go to the **Files** section.
+4. Navigate to `data` > `Saves`.
+5. Drag the save file from your computer into the `Saves` folder.
+6. Wait until the upload has completely finished.
+
+## Step 3: Set the Server to Use the Save
+
+1. Return to the server's main directory in the file manager.
+2. Open `data` and then open `serverconfig.json`.
+3. Locate the `SaveFilelocation` setting.
+4. Change its value to the exact filename of the save you uploaded.
+5. Save the configuration file.
+
+## Step 4: Start the Server
+
+Start your Vintage Story server.
+
+The server will use the save specified by `SaveFilelocation` and load your uploaded world.
