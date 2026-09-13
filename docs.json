@@ -18,6 +18,13 @@
         ]
       },
       {
+        "group": "Client Portal",
+        "icon": "user",
+        "pages": [
+          "How-to-cancel-a-service"
+        ]
+      },
+      {
         "group": "Game Docs",
         "icon": "gamepad-modern",
         "pages": [
@@ -93,7 +100,8 @@
           "vps/open-ports",
           "vps/reset-password",
           "vps/cancel-service"
-        ]
+        ],
+        "icon": "computer"
       }
     ]
   },
