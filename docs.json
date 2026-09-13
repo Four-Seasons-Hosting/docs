@@ -21,7 +21,8 @@
         "group": "Client Portal",
         "icon": "user",
         "pages": [
-          "How-to-cancel-a-service"
+          "How-to-cancel-a-service",
+          "How-to-Upgrade-or-Downgrade-a-Service"
         ]
       },
       {
