@@ -92,12 +92,12 @@
           {
             "group": "Vintage Story",
             "pages": [
-              "How-to-Add-an-Admin-to-Your-Vintage-Story-Server",
-              "How-to-Add-Mods-to-Your-Vintage-Story-Server",
-              "How-to-Change-Your-MOTD-for-Vintage-Story",
-              "How-to-List-Your-Vintage-Story-Server-on-the-Public-Server-List",
-              "how-to-manage-the-vintage-story-server-whitelist",
-              "how-to-upload-a-vintage-story-save-to-your-server"
+              "vintage-story/How-to-Add-an-Admin-to-Your-Vintage-Story-Server",
+              "vintage-story/How-to-Add-Mods-to-Your-Vintage-Story-Server",
+              "vintage-story/How-to-Change-Your-MOTD-for-Vintage-Story",
+              "vintage-story/How-to-List-Your-Vintage-Story-Server-on-the-Public-Server-List",
+              "vintage-story/how-to-manage-the-vintage-story-server-whitelist",
+              "vintage-story/how-to-upload-a-vintage-story-save-to-your-server"
             ]
           }
         ]

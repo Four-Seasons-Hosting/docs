@@ -1,0 +1,47 @@
+---
+title: "How to Manage the Vintage Story Server Whitelist"
+---
+
+Vintage Story's whitelist lets you restrict your server so that only approved players can connect. Whitelist commands can be entered through the server console while the server is running.
+
+## Add a Player to the Whitelist
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com` and open your Vintage Story server.
+2. Go to the **Console** page.
+3. Enter the following command, replacing `<username>` with the player's exact username:
+
+```text
+/player <username> whitelist on
+```
+
+4. Press **Enter** to run the command.
+
+## Turn On Whitelist Mode
+
+Once you've added the players you want to allow access to:
+
+1. Open the **Console** page.
+2. Enter:
+
+```text
+/serverconfig whitelistmode on
+```
+
+3. Press **Enter**.
+
+The server will now only allow players who have been added to the whitelist to join.
+
+## Turn Off Whitelist Mode
+
+To allow all players to join again:
+
+1. Open the **Console** page.
+2. Run:
+
+```text
+/serverconfig whitelistmode off
+```
+
+3. Press **Enter**.
+
+Whitelist mode will be disabled, allowing players who are not on the whitelist to connect.
