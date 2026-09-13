@@ -26,6 +26,12 @@
         ]
       },
       {
+        "group": "Game Panel",
+        "pages": [
+          "game-panel/how-to-migrate-your-service-to-a-different-location"
+        ]
+      },
+      {
         "group": "Game Docs",
         "icon": "gamepad-modern",
         "pages": [
