@@ -28,6 +28,7 @@
       {
         "group": "Game Panel",
         "pages": [
+          "game-panel/panel-features",
           "game-panel/how-to-migrate-your-service-to-a-different-location"
         ]
       },
