@@ -1,0 +1,37 @@
+---
+title: "How Much RAM Does a Minecraft Server Need?"
+description: "RAM guidelines for vanilla, Paper, Spigot and modded Minecraft servers."
+---
+
+RAM decides how much the server can keep loaded at once: chunks, entities, plugins and mods. Too little causes lag and crashes. Far more than needed does not make the server faster.
+
+For a number based on your exact setup, use the [Minecraft server RAM calculator](https://fourseasonshosting.com/tools/ramcalculator).
+
+## Vanilla, Spigot and Paper
+
+| Configuration | RAM |
+| --- | --- |
+| Minecraft 1.16.5 and older | 2 GB base |
+| Minecraft 1.17 and newer | 3 GB base |
+| Every 5 players | Add 1 GB |
+| Every 10 plugins | Add about 1 GB, depending on the plugins |
+
+## Forge, NeoForge and Fabric
+
+Modded servers use far more memory, and the modpack matters more than the player count.
+
+| Modpack | Starting RAM |
+| --- | --- |
+| Minecraft 1.12.2 and older | 4 GB |
+| Minecraft 1.13 to 1.16.5 | 5 GB |
+| Minecraft 1.17 and newer | 6 GB |
+
+Many modpacks list a recommended amount on their download page. Use whichever figure is higher.
+
+## What Else Uses RAM
+
+- **Exploration:** Every loaded chunk takes memory. Lower [view distance](/minecraft/view-distance) and [simulation distance](/minecraft/simulation-distance) to cut usage.
+- **Entities:** Large mob farms and dropped items add up.
+- **World size on disk:** Does not affect RAM directly. Only loaded chunks do.
+
+If the console shows [Can't keep up](/minecraft/cant-keep-up) warnings while memory sits near the limit, upgrade your plan or reduce what is loaded.

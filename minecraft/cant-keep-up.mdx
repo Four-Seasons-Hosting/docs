@@ -25,7 +25,7 @@ Rough guide to what the numbers mean:
 
 If your server is starved for RAM, performance suffers. Every loaded plugin, mod, and connected player takes up memory — run out, and the server has nowhere to put that data, so it stalls.
 
-Check current usage from the **Console** page of your panel. If you're consistently near the ceiling, enabling the [Aikar startup flags](how-to-enable-the-aikar-startup-flags.md) from the **Startup** page can help the JVM manage memory more efficiently.
+Check current usage from the **Console** page of your panel. If you're consistently near the ceiling, enabling [Aikar's startup flags](https://docs.papermc.io/paper/aikars-flags) from the **Startup** page can help the JVM manage memory more efficiently.
 
 ### World and Entity Load
 
@@ -43,9 +43,9 @@ A handful of in-game conditions tend to be the biggest tick-time offenders:
 
 ## Quick Wins to Cut Lag
 
-- [Reduce view distance](how-to-change-a-minecraft-servers-view-distance.md)
-- [Reduce simulation distance](how-to-change-a-minecraft-servers-simulation-distance.md)
-- Pre-generate the world with [Chunky](https://modrinth.com/plugin/chunky)
-- [Tune your startup flags](how-to-enable-the-aikar-startup-flags.md)
-- [Tune mob spawn rates](how-to-change-minecraft-server-mob-spawn-rates.md) _(Paper/Spigot only)_
-- [Trim memory usage](how-to-reduce-minecraft-server-memory-usage.md) _(Paper/Spigot only)_
+- [Reduce view distance](/minecraft/view-distance)
+- [Reduce simulation distance](/minecraft/simulation-distance)
+- [Pre-generate the world](/minecraft/pregen-chunks) with Chunky
+- [Tune your startup flags](https://docs.papermc.io/paper/aikars-flags)
+- [Tune mob spawn rates](/minecraft/mob-spawn-rates) _(Paper/Spigot only)_
+- [Trim memory usage](/minecraft/how-much-ram#what-else-uses-ram)

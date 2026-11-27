@@ -1,0 +1,28 @@
+---
+title: "How to Upload a Custom World to a Minecraft Server"
+description: "Upload a singleplayer or downloaded world to your Minecraft server and set it as the active world."
+---
+
+Make sure the world was made on the same Minecraft version as your server, or an older one. Opening a world on an older server version than it was saved on can corrupt it.
+
+> **Before uploading:** Create a backup from **Backups** if you want to keep the current world.
+
+## Upload the World
+
+1. Compress the world folder into a ZIP file on your computer. A singleplayer world folder contains `level.dat`.
+2. Log in to the game panel at `gamepanel.fourseasonshosting.com` and open your server.
+3. Stop the server from the **Console** page.
+4. Open **Files** and upload the ZIP to the main server directory. For large worlds, use [SFTP](/game-panel/sftp).
+5. Right-click the ZIP and select **Unarchive**.
+6. Check that the world folder sits in the main server directory and that `level.dat` is directly inside it, not inside another folder.
+
+## Set the Active World
+
+1. In **Files**, open `server.properties`.
+2. Set `level-name` to the name of the uploaded world folder, for example:
+   ```text
+   level-name=house-map
+   ```
+3. Save the file and start the server from the **Console** page.
+
+Bedrock servers keep worlds inside the `worlds` folder. Upload the world folder there, then set `level-name` the same way.

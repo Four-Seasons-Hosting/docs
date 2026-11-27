@@ -1,0 +1,42 @@
+---
+title: "Spigot vs Paper vs Purpur: Which Minecraft Server Software?"
+description: "The differences between Spigot, Paper and Purpur, and which one to run for plugins."
+---
+
+Running Bukkit-style plugins needs plugin-capable server software instead of the vanilla server JAR. Spigot, Paper and Purpur are a family: Paper is built on Spigot, and Purpur is built on Paper, so each one runs nearly all plugins made for the one before it.
+
+## Spigot
+
+Spigot is the original high-compatibility plugin server, built on CraftBukkit.
+
+- Runs almost every Bukkit and Spigot plugin.
+- Fewer performance optimizations than Paper, so it lags sooner with many players or heavy farms.
+- Best when a specific plugin only supports Spigot.
+
+## Paper
+
+Paper is a fork of Spigot focused on performance, stability and bug fixes.
+
+- Much faster chunk loading and entity handling than Spigot.
+- Extra configuration files (`paper-global.yml`, `paper-world-defaults.yml`) for tuning.
+- Fixes some vanilla exploits and bugs. A few technical-Minecraft farms that rely on those bugs behave differently.
+- Runs nearly all Spigot plugins, plus Paper-only plugins.
+
+## Purpur
+
+Purpur is a fork of Paper that adds gameplay options on top of Paper's performance work.
+
+- Everything Paper has.
+- Hundreds of extra settings in `purpur.yml`, such as rideable mobs, mob behavior and gameplay toggles.
+- Best when you want to change how the game plays without extra plugins.
+
+## Which Should You Pick?
+
+| You want | Run |
+| --- | --- |
+| The best performance for most servers | Paper |
+| Paper plus extra gameplay settings | Purpur |
+| A plugin that only supports Spigot | Spigot |
+| Mods instead of plugins | Forge, NeoForge or Fabric |
+
+To switch software, see [Mods and plugins](/minecraft/mods-and-plugins). Take a backup from **Backups** first.

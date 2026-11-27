@@ -1,0 +1,26 @@
+---
+title: "Which Java Version Does My Minecraft Server Need?"
+description: "Java versions required by each Minecraft version, and how to change Java on your server."
+---
+
+Minecraft Java Edition servers need a specific Java version. With the wrong one, the server will not start, usually with an `UnsupportedClassVersionError` or a message naming the Java version it expects.
+
+## Java Version by Minecraft Version
+
+| Minecraft version | Java version |
+| --- | --- |
+| 1.16.5 and older | Java 8 (Java 11 also works for most 1.13 to 1.16.5 servers) |
+| 1.17 to 1.17.1 | Java 16 or newer |
+| 1.18 to 1.20.4 | Java 17 |
+| 1.20.5 to 1.21.11 | Java 21 |
+| 26.1 and newer | Java 25 |
+
+Mods, modpacks and plugins can require a newer Java version than the game itself. If the developer lists one, use it.
+
+## Change the Java Version
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com` and open your server.
+2. Stop the server from the **Console** page.
+3. Open the **Startup** page.
+4. Under **Docker Image**, select the Java version you need.
+5. Start the server from the **Console** page.

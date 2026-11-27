@@ -1,0 +1,30 @@
+---
+title: "Fix \"Failed to Check Session Lock\" on a Minecraft Server"
+description: "Stop the server, delete session.lock from each world folder, and start it again."
+---
+
+The server crashes or refuses to start with this error in the console:
+
+```text
+net.minecraft.server.WorldConflictException: Failed to check session lock, aborting
+```
+
+Every world folder holds a small `session.lock` file that tells Minecraft which process owns the world. When the server is force-stopped, or the file is damaged, the server can no longer verify it and aborts rather than risk writing to a world it does not own.
+
+## Fix the Error
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com` and open your server.
+2. Stop the server from the **Console** page. If it does not stop, use **Kill**.
+3. Open the **Files** page.
+4. Open your world folder. Its name matches the `level-name` value in `server.properties` (usually `world`).
+5. Delete `session.lock`.
+6. Repeat for `world_nether` and `world_the_end` if those folders exist.
+7. Start the server from the **Console** page.
+
+Minecraft creates a fresh `session.lock` on startup. Deleting it does not touch your builds, inventories or player data.
+
+## Prevent It
+
+- Stop the server with **Stop** or the `stop` command instead of **Kill**, so the world is saved and the lock is released cleanly.
+- Keep regular backups from the **Backups** page in case the world itself is damaged.
+- If the error returns on every start, check the console for disk or permission errors above it and open a support ticket.

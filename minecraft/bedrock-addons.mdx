@@ -1,0 +1,29 @@
+---
+title: "How to Add Add-ons to a Minecraft Bedrock Server"
+description: "Install behavior packs and resource packs on a Bedrock server by applying them to the world in Minecraft first."
+---
+
+The simplest way to install Bedrock add-ons is to apply them to the world in Minecraft on Windows, then upload the world back to the server. Minecraft writes the pack files and the world settings for you.
+
+## Download the World
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com` and open your server.
+2. Stop the server from the **Console** page.
+3. Open **Files**, go to the `worlds` folder, and download the world folder. Use [SFTP](/game-panel/sftp) for large worlds.
+
+## Apply the Add-ons in Minecraft
+
+1. Press **Win + R**, enter `%appdata%\Minecraft Bedrock\Users`, then open the numbered folder for your account and go to `games\com.mojang\minecraftWorlds`.
+   Minecraft versions older than 1.21.120 store worlds in `%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\minecraftWorlds`.
+2. Copy the downloaded world folder into it. Avoid special characters in the folder name.
+3. Import your add-ons by opening the `.mcaddon` or `.mcpack` files.
+4. Start Minecraft, open **Worlds**, and select **Edit** next to the server world.
+5. Under **Behavior Packs** and **Resource Packs**, activate your add-ons from **My Packs**.
+6. Close Minecraft.
+
+## Upload the World
+
+1. In the game panel, open **Files** and go to `worlds`.
+2. Rename the current world folder to keep it as a backup.
+3. Upload the modified world folder with the original folder name.
+4. Start the server from the **Console** page.

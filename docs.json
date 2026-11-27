@@ -29,7 +29,8 @@
         "group": "Game Panel",
         "pages": [
           "game-panel/panel-features",
-          "game-panel/how-to-migrate-your-service-to-a-different-location"
+          "game-panel/how-to-migrate-your-service-to-a-different-location",
+          "game-panel/sftp"
         ]
       },
       {
@@ -44,9 +45,19 @@
               "minecraft/cant-keep-up",
               "minecraft/common-lag-causes",
               "minecraft/restart-frequency",
+              "minecraft/session-lock",
+              "minecraft/server-tick-loop",
+              "minecraft/connection-timed-out",
+              "minecraft/authentication-servers-down",
               {
                 "group": "How to's",
                 "pages": [
+                  "minecraft/how-much-ram",
+                  "minecraft/java-version",
+                  "minecraft/server-software",
+                  "minecraft/upload-world",
+                  "minecraft/chunker",
+                  "minecraft/bedrock-addons",
                   "minecraft/geyser",
                   "minecraft/essentialsx",
                   "minecraft/mods-and-plugins",
@@ -100,6 +111,12 @@
               "vintage-story/how-to-manage-the-vintage-story-server-whitelist",
               "vintage-story/how-to-upload-a-vintage-story-save-to-your-server"
             ]
+          },
+          {
+            "group": "Palworld",
+            "pages": [
+              "palworld/admin-access"
+            ]
           }
         ]
       },
@@ -112,7 +129,9 @@
           "vps/windows-login",
           "vps/open-ports",
           "vps/reset-password",
-          "vps/cancel-service"
+          "vps/cancel-service",
+          "vps/ssh",
+          "vps/remote-desktop-from-linux"
         ],
         "icon": "computer"
       }
@@ -127,8 +146,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Client Area",
+      "href": "https://client.fourseasonshosting.com"
     }
   },
   "contextual": {
@@ -383,6 +402,191 @@
     {
       "source": "/untitled-page-37",
       "destination": "/minecraft/voting",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-add-mods-to-your-vintage-story-server-2215651m0",
+      "destination": "/vintage-story/How-to-Add-Mods-to-Your-Vintage-Story-Server",
+      "permanent": true
+    },
+    {
+      "source": "/failed-to-check-session-lock-2214756m0",
+      "destination": "/minecraft/session-lock",
+      "permanent": true
+    },
+    {
+      "source": "/using-chunker-to-convert-minecraft-worlds-across-editions-2214768m0",
+      "destination": "/minecraft/chunker",
+      "permanent": true
+    },
+    {
+      "source": "/listing-your-vintage-story-server-on-the-public-server-list-2215652m0",
+      "destination": "/vintage-story/How-to-List-Your-Vintage-Story-Server-on-the-Public-Server-List",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-add-an-admin-to-your-vintage-story-server-2215656m0",
+      "destination": "/vintage-story/How-to-Add-an-Admin-to-Your-Vintage-Story-Server",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-set-a-custom-seed-on-your-minecraft-server-2214767m0",
+      "destination": "/minecraft/change-seed",
+      "permanent": true
+    },
+    {
+      "source": "/managing-your-vintage-story-server-whitelist-2215653m0",
+      "destination": "/vintage-story/how-to-manage-the-vintage-story-server-whitelist",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-download-your-minecraft-server-world-2214784m0",
+      "destination": "/minecraft/download-world",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-install-a-custom-minecraft-modpack-2214785m0",
+      "destination": "/minecraft/custom-modpack",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-fix-authentication-servers-are-down-please-try-again-later-2214755m0",
+      "destination": "/minecraft/authentication-servers-down",
+      "permanent": true
+    },
+    {
+      "source": "/resetting-your-vps-password-2214817m0",
+      "destination": "/vps/reset-password",
+      "permanent": true
+    },
+    {
+      "source": "/which-java-version-to-use-for-minecraft-server-2214769m0",
+      "destination": "/minecraft/java-version",
+      "permanent": true
+    },
+    {
+      "source": "/fixing-the-connection-timed-out-getsockopt-error-in-minecraft-2214759m0",
+      "destination": "/minecraft/connection-timed-out",
+      "permanent": true
+    },
+    {
+      "source": "/uploading-a-vintage-story-save-to-your-server-2215650m0",
+      "destination": "/vintage-story/how-to-upload-a-vintage-story-save-to-your-server",
+      "permanent": true
+    },
+    {
+      "source": "/dynmap-2214778m0",
+      "destination": "/minecraft/dynmap",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-the-difference-between-spigot-paper-and-purpur-2214788m0",
+      "destination": "/minecraft/server-software",
+      "permanent": true
+    },
+    {
+      "source": "/ssh-client-setup-2214818m0",
+      "destination": "/vps/ssh",
+      "permanent": true
+    },
+    {
+      "source": "/change-window-server-password-locked-out-2214811m0",
+      "destination": "/vps/windows-password-lockout",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-connect-to-your-vps-from-any-linux-or-debian-distro-2214814m0",
+      "destination": "/vps/remote-desktop-from-linux",
+      "permanent": true
+    },
+    {
+      "source": "/add-add-ons-to-your-bedrock-server-2214770m0",
+      "destination": "/minecraft/bedrock-addons",
+      "permanent": true
+    },
+    {
+      "source": "/exception-server-tick-loop-2214757m0",
+      "destination": "/minecraft/server-tick-loop",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-optimize-your-server-2214766m0",
+      "destination": "/minecraft/common-lag-causes",
+      "permanent": true
+    },
+    {
+      "source": "/reduce-lag-on-forgemc-server-2214746m0",
+      "destination": "/minecraft/common-lag-causes",
+      "permanent": true
+    },
+    {
+      "source": "/reduce-lag-on-fabricmc-server-2214747m0",
+      "destination": "/minecraft/common-lag-causes",
+      "permanent": true
+    },
+    {
+      "source": "/creating-your-vps-2214812m0",
+      "destination": "/vps/create-vps",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-become-admin-on-your-palworld-server-2215488m0",
+      "destination": "/palworld/admin-access",
+      "permanent": true
+    },
+    {
+      "source": "/opening-ports-on-a-vps-2214816m0",
+      "destination": "/vps/open-ports",
+      "permanent": true
+    },
+    {
+      "source": "/configure-authentication-key-on-beammp-2257562m0",
+      "destination": "/beammp/auth-key",
+      "permanent": true
+    },
+    {
+      "source": "/configure-beammp-server-version-on-beammp-2257578m0",
+      "destination": "/beammp/configure-server",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-enabledisablemanage-your-whitelistallowlist-2214771m0",
+      "destination": "/minecraft/whitelist",
+      "permanent": true
+    },
+    {
+      "source": "/logging-into-your-vps-windows-2214815m0",
+      "destination": "/vps/windows-login",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-change-your-motd-welcome-message-for-vintage-story-2215654m0",
+      "destination": "/vintage-story/How-to-Change-Your-MOTD-for-Vintage-Story",
+      "permanent": true
+    },
+    {
+      "source": "/developers-and-your-vps-2214813m0",
+      "destination": "/vps/developer-access",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-upload-a-custom-minecraft-world-2214787m0",
+      "destination": "/minecraft/upload-world",
+      "permanent": true
+    },
+    {
+      "source": "/uploading-files-via-sftp-2214798m0",
+      "destination": "/game-panel/sftp",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-cancel-a-service-2214803m0",
+      "destination": "/How-to-cancel-a-service",
+      "permanent": true
+    },
+    {
+      "source": "/docs/game-knowledge-base/minecraft/how-much-ram-do-i-need-for-my-minecraft-server",
+      "destination": "/minecraft/how-much-ram",
       "permanent": true
     }
   ]
