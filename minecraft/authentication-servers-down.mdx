@@ -1,0 +1,18 @@
+---
+title: "Fix \"Authentication Servers Are Down\" in Minecraft"
+description: "What to do when Minecraft says the authentication servers are down for maintenance."
+---
+
+`Failed to login: Authentication servers are down. Please try again later` comes from Mojang's login service, not from your server. The client could not verify your account, so no server will let you in until it can.
+
+## Fix It
+
+1. Check whether Mojang has an outage. If many players report the same error, wait for it to be resolved.
+2. Restart Minecraft and the launcher, and sign out and back in to your Microsoft account.
+3. Restart your router so you get a fresh connection.
+4. If you use a VPN, turn it off. If you do not, try one: some networks block the login service.
+5. If none of this helps and there is no outage, contact [Minecraft Support](https://help.minecraft.net).
+
+## Server Owners
+
+Leave `online-mode=true` in `server.properties`. Turning it off lets anyone join under any username, including yours, and does not fix the login problem for players.

@@ -1,0 +1,28 @@
+---
+title: "How to Upload Files to Your Game Server With SFTP"
+description: "Connect to your game server with FileZilla or another SFTP client to transfer large files."
+---
+
+SFTP transfers files between your computer and your game server. Use it instead of the panel's **Files** page for large files such as worlds and modpacks, or for many files at once.
+
+## Find Your SFTP Details
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com` and open your server.
+2. Open the **Settings** page.
+3. Under **SFTP Details**, copy the server address and username.
+
+Your SFTP password is your game panel password. The port is the number after the colon in the server address.
+
+## Connect With FileZilla
+
+1. Download and install the [FileZilla client](https://filezilla-project.org/download.php?show_all=1). Any SFTP client works.
+2. In FileZilla, fill in the quickconnect bar:
+   - **Host:** the address without the port, starting with `sftp://`
+   - **Username:** the SFTP username
+   - **Password:** your game panel password
+   - **Port:** the number after the colon
+3. Select **Quickconnect** and accept the host key prompt.
+
+Your server files appear on the right. Drag files between your computer on the left and the server on the right.
+
+Stop the server before replacing world files, so it does not overwrite them while it runs.

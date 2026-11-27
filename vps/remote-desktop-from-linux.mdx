@@ -1,0 +1,30 @@
+---
+title: "How to Connect to a Windows VPS From Linux"
+description: "Use Remmina to open a Remote Desktop session to your Windows VPS from any Linux distribution."
+---
+
+Remmina is a Remote Desktop client available on every major Linux distribution. You need the IP address and password from your VPS welcome email.
+
+## Install Remmina
+
+| Distribution | Command |
+| --- | --- |
+| Debian, Ubuntu and derivatives | `sudo apt update && sudo apt install remmina` |
+| Fedora | `sudo dnf install remmina` |
+| Arch Linux | `sudo pacman -S remmina` |
+
+Remmina is also available as a Flatpak from Flathub.
+
+## Connect
+
+1. Open Remmina and select **+** to create a connection profile.
+2. Set **Protocol** to **RDP - Remote Desktop Protocol**.
+3. Enter your VPS IP address in **Server**.
+4. Enter `Administrator` as the **Username** and the password from your welcome email.
+5. Select **Save and Connect**. Accept the certificate prompt the first time.
+
+The next time, double-click the saved profile to connect.
+
+## On Windows or macOS
+
+See [Log in to a Windows VPS](/vps/windows-login).

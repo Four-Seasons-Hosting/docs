@@ -1,0 +1,27 @@
+---
+title: "Fix \"Connection Timed Out: getsockopt\" in Minecraft"
+description: "Why Minecraft says Connection timed out: getsockopt when joining a server, and how to fix it."
+---
+
+`Connection timed out: getsockopt` means your Minecraft client sent a connection request and never got an answer. The server may be offline, the address may be wrong, or something between you and the server is dropping the traffic.
+
+## Check the Server First
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com` and open your server.
+2. On the **Console** page, confirm the server is running and the console shows `Done` after startup.
+3. Copy the address shown on the panel, including the port after the colon, and paste it into Minecraft exactly as shown.
+
+If the server is stopped or crashing on startup, fix that first. The console output above the crash explains why.
+
+## Check Your Own Connection
+
+If the server is running and other players can join, the problem is on your side.
+
+- **Restricted network:** School, work and public Wi-Fi often block game traffic. Try a mobile hotspot or another network.
+- **Firewall:** On Windows, open **Windows Security** > **Firewall & network protection** > **Allow an app through firewall** and make sure `javaw.exe` is allowed on both **Private** and **Public** networks.
+- **VPN:** A VPN can bypass a restrictive network, or be the cause of the timeout. Try connecting with it on and off.
+- **Router:** Restart your router if every server times out.
+
+## Still Timing Out
+
+If other players can join and you have tried another network, open a support ticket with your server address and a screenshot of the error. In rare cases a route to one node is affected, and we can move your server to a different node, which changes its address.

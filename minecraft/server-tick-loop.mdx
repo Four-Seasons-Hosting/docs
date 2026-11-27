@@ -1,0 +1,27 @@
+---
+title: "Fix \"Exception in Server Tick Loop\" on a Minecraft Server"
+description: "Repair the corrupted whitelist and ban list JSON files behind Exception in server tick loop."
+---
+
+A crash such as this one in the console is usually caused by a damaged JSON list file:
+
+```text
+java.lang.NullPointerException: Exception in server tick loop
+```
+
+The usual suspects are `whitelist.json`, `banned-players.json`, `banned-ips.json` and `ops.json` in the main server directory. A failed edit or an interrupted save leaves them with invalid JSON, and the server fails when it reads them.
+
+## Fix the Error
+
+1. Log in to the game panel at `gamepanel.fourseasonshosting.com` and open your server.
+2. Stop the server from the **Console** page.
+3. Open the **Files** page and download copies of `whitelist.json`, `banned-players.json`, `banned-ips.json` and `ops.json`.
+4. Open each file. A healthy file starts with `[` and ends with `]`. A file that is empty, cut off or full of unexpected characters is the broken one.
+5. Fix the broken file in a JSON validator, or delete it.
+6. Start the server from the **Console** page.
+
+Minecraft recreates any deleted list as an empty file. If you deleted `ops.json` or `whitelist.json`, add your operators and whitelisted players again.
+
+## If the Crash Continues
+
+Scroll up in the console from the crash. The lines just above `Exception in server tick loop` usually name the plugin, mod or file involved. Remove or update that plugin or mod, or restore a backup from the **Backups** page.

@@ -1,0 +1,33 @@
+---
+title: "How to Connect to a Linux VPS With SSH"
+description: "Log in to your Linux VPS over SSH from Windows, macOS or Linux."
+---
+
+You need the IP address, username and password from your VPS welcome email. If you cannot find it, open a support ticket.
+
+## Windows, macOS and Linux Terminal
+
+Windows 10 and 11, macOS and Linux all include an SSH client.
+
+1. Open **Terminal** (or **PowerShell** on Windows).
+2. Run the command below, replacing the IP address with yours:
+   ```bash
+   ssh root@203.0.113.10
+   ```
+3. Type `yes` the first time you are asked to trust the server's key.
+4. Enter your password. Nothing appears while you type, which is normal.
+
+## MobaXterm
+
+MobaXterm is a Windows SSH client with a built-in file browser.
+
+1. Install [MobaXterm](https://mobaxterm.mobatek.net/) and open it.
+2. Select **Session**, then **SSH**.
+3. Enter your VPS IP address in **Remote host** and your username in **Specify username**.
+4. Select **OK** and enter your password when asked.
+
+## After You Log In
+
+- Change the password from your welcome email with `passwd`.
+- If you are locked out, see [Reset your VPS password](/vps/reset-password).
+- To open ports for a game or app, see [Open ports on a VPS](/vps/open-ports).
